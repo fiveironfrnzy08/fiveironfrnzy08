@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/updates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/update"
+            android:gravity="center_horizontal"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp"
+            android:text="Check for Updates"
+            android:textColor="@color/link" />
+
+        <TextView
+            android:id="@+id/rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/five_stars"
+            android:gravity="center_horizontal"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:text="Please rate this app!"
+            android:textColor="@color/link"
+            android:clickable="true" />
+    </LinearLayout>
+    
+    <Button
+	            android:id="@+id/articleUpdatesPlaceholder"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"  
+	            android:background="@drawable/article_update_selector"  
+	        	android:layout_marginTop="3dp"           
+		        android:paddingTop="7dp"
+		        android:paddingBottom="7dp"
+		        android:paddingLeft="10dp"
+		        android:paddingRight="10dp"
+	            android:visibility="gone" />
+
+</LinearLayout>

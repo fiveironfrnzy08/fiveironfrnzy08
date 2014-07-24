@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal" >
+        
+	<LinearLayout
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    xmlns:tools="http://schemas.android.com/tools"
+	    android:id="@+id/list"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical" >
+	
+	    <ListView
+	        android:id="@android:id/list"
+	        android:layout_width="fill_parent"
+	        android:layout_height="match_parent"
+	        android:layout_gravity="bottom" />
+
+	</LinearLayout>
+
+	<ImageView
+	    android:id="@+id/loadingImageView"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" 
+	    android:layout_centerInParent="true"/>
+	
+	<TextView
+	    android:id="@+id/progressTextView"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerInParent="true"
+	    android:textColor="#9e9e9e"
+	    android:textSize="12sp"/>
+
+	<LinearLayout
+	    android:id="@+id/articleUpdatesLayout"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:gravity="center_horizontal|bottom"
+	    android:orientation="vertical"
+	    android:visibility="gone" >
+
+	    <Button
+	        android:id="@+id/articleUpdates"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/article_update_selector"	    
+	        android:layout_marginTop="3dp"     
+	        android:paddingTop="7dp"
+	        android:paddingBottom="7dp"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:visibility="visible" />
+	    
+	</LinearLayout>
+
+ </RelativeLayout>
