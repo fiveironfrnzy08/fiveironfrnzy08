@@ -1,0 +1,9 @@
+<item> 
+      <title>US jobless rate in surprise fall</title>  
+      <description></description>  
+      <link>http://www.bbc.co.uk/news/business-19845234#sa-ns_mchannel=rss&amp;ns_source=PublicRSS20-sa</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-19845234</guid>  
+      <pubDate>Fri, 05 Oct 2012 16:39:15 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/63318000/jpg/_63318270_62020938.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/63318000/jpg/_63318271_62020938.jpg"/> 
+    </item>

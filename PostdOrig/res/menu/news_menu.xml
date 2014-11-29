@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/refreshOption" 
+        android:title="@string/refresh" 
+        android:icon="@+drawable/ic_menu_refresh"/>
+    <item android:id="@+id/setPrefsOption" 
+        android:title="@string/set_preferences" 
+        android:icon="@+drawable/ic_menu_preferences"/>
+	<item android:id="@+id/exitOption" 
+	    android:title="@string/exit" 
+	    android:icon="@+drawable/ic_menu_home"/>
+</menu>

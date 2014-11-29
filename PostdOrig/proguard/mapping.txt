@@ -1,0 +1,3193 @@
+android.support.v4.app.ActivityCompatHoneycomb -> a:
+    void invalidateOptionsMenu(android.app.Activity) -> a
+android.support.v4.app.BackStackRecord -> b:
+    android.support.v4.app.FragmentManagerImpl mManager -> a
+    android.support.v4.app.BackStackRecord$Op mHead -> b
+    android.support.v4.app.BackStackRecord$Op mTail -> c
+    int mNumOp -> d
+    int mEnterAnim -> e
+    int mExitAnim -> f
+    int mPopEnterAnim -> g
+    int mPopExitAnim -> h
+    int mTransition -> i
+    int mTransitionStyle -> j
+    boolean mAddToBackStack -> k
+    boolean mAllowAddToBackStack -> l
+    java.lang.String mName -> m
+    boolean mCommitted -> n
+    int mIndex -> o
+    int mBreadCrumbTitleRes -> p
+    java.lang.CharSequence mBreadCrumbTitleText -> q
+    int mBreadCrumbShortTitleRes -> r
+    java.lang.CharSequence mBreadCrumbShortTitleText -> s
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    void addOp(android.support.v4.app.BackStackRecord$Op) -> a
+    android.support.v4.app.FragmentTransaction add(android.support.v4.app.Fragment,java.lang.String) -> a
+    void doAddOp(int,android.support.v4.app.Fragment,java.lang.String,int) -> a
+    android.support.v4.app.FragmentTransaction remove(android.support.v4.app.Fragment) -> a
+    android.support.v4.app.FragmentTransaction addToBackStack(java.lang.String) -> a
+    void bumpBackStackNesting(int) -> a
+    int commit() -> a
+    int commitAllowingStateLoss() -> b
+    int commitInternal(boolean) -> a
+    void run() -> run
+    void popFromBackStack(boolean) -> b
+    java.lang.String getName() -> c
+android.support.v4.app.BackStackRecord$Op -> c:
+    android.support.v4.app.BackStackRecord$Op next -> a
+    android.support.v4.app.BackStackRecord$Op prev -> b
+    int cmd -> c
+    android.support.v4.app.Fragment fragment -> d
+    int enterAnim -> e
+    int exitAnim -> f
+    int popEnterAnim -> g
+    int popExitAnim -> h
+    java.util.ArrayList removed -> i
+android.support.v4.app.BackStackState -> android.support.v4.app.BackStackState:
+    int[] mOps -> a
+    int mTransition -> b
+    int mTransitionStyle -> c
+    java.lang.String mName -> d
+    int mIndex -> e
+    int mBreadCrumbTitleRes -> f
+    java.lang.CharSequence mBreadCrumbTitleText -> g
+    int mBreadCrumbShortTitleRes -> h
+    java.lang.CharSequence mBreadCrumbShortTitleText -> i
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    android.support.v4.app.BackStackRecord instantiate(android.support.v4.app.FragmentManagerImpl) -> a
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.BackStackState$1 -> d:
+    android.support.v4.app.BackStackState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.BackStackState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.DialogFragment -> e:
+    int mStyle -> a
+    int mTheme -> b
+    boolean mCancelable -> c
+    boolean mShowsDialog -> d
+    int mBackStackId -> e
+    android.app.Dialog mDialog -> f
+    boolean mViewDestroyed -> g
+    boolean mDismissed -> h
+    boolean mShownByMe -> i
+    void setStyle(int,int) -> a
+    int show(android.support.v4.app.FragmentTransaction,java.lang.String) -> a
+    void dismiss() -> a
+    void dismissInternal(boolean) -> a
+    int getTheme() -> b
+    void onAttach(android.app.Activity) -> a
+    void onDetach() -> c
+    void onCreate(android.os.Bundle) -> a
+    android.view.LayoutInflater getLayoutInflater(android.os.Bundle) -> b
+    android.app.Dialog onCreateDialog(android.os.Bundle) -> c
+    void onCancel(android.content.DialogInterface) -> onCancel
+    void onDismiss(android.content.DialogInterface) -> onDismiss
+    void onActivityCreated(android.os.Bundle) -> d
+    void onStart() -> d
+    void onSaveInstanceState(android.os.Bundle) -> e
+    void onStop() -> e
+    void onDestroyView() -> f
+android.support.v4.app.Fragment -> android.support.v4.app.Fragment:
+    java.util.HashMap sClassMap -> a
+    int mState -> j
+    android.view.View mAnimatingAway -> k
+    int mStateAfterAnimating -> l
+    android.os.Bundle mSavedFragmentState -> m
+    android.util.SparseArray mSavedViewState -> n
+    int mIndex -> o
+    java.lang.String mWho -> p
+    android.os.Bundle mArguments -> q
+    android.support.v4.app.Fragment mTarget -> r
+    int mTargetIndex -> s
+    int mTargetRequestCode -> t
+    boolean mAdded -> u
+    boolean mRemoving -> v
+    boolean mResumed -> w
+    boolean mFromLayout -> x
+    boolean mInLayout -> y
+    boolean mRestored -> z
+    int mBackStackNesting -> A
+    android.support.v4.app.FragmentManagerImpl mFragmentManager -> B
+    android.support.v4.app.FragmentActivity mActivity -> C
+    int mFragmentId -> D
+    int mContainerId -> E
+    java.lang.String mTag -> F
+    boolean mHidden -> G
+    boolean mDetached -> H
+    boolean mRetainInstance -> I
+    boolean mRetaining -> J
+    boolean mHasMenu -> K
+    boolean mMenuVisible -> L
+    boolean mCalled -> M
+    int mNextAnim -> N
+    android.view.ViewGroup mContainer -> O
+    android.view.View mView -> P
+    android.view.View mInnerView -> Q
+    boolean mDeferStart -> R
+    boolean mUserVisibleHint -> S
+    android.support.v4.app.LoaderManagerImpl mLoaderManager -> T
+    boolean mLoadersStarted -> U
+    boolean mCheckedForLoaderManager -> V
+    android.support.v4.app.Fragment instantiate(android.content.Context,java.lang.String) -> a
+    android.support.v4.app.Fragment instantiate(android.content.Context,java.lang.String,android.os.Bundle) -> a
+    void restoreViewState() -> g
+    void setIndex(int) -> a
+    boolean isInBackStack() -> h
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    android.support.v4.app.FragmentActivity getActivity() -> i
+    android.support.v4.app.FragmentManager getFragmentManager() -> j
+    void onHiddenChanged(boolean) -> b
+    void onActivityResult(int,int,android.content.Intent) -> a
+    android.view.LayoutInflater getLayoutInflater(android.os.Bundle) -> b
+    void onInflate(android.app.Activity,android.util.AttributeSet,android.os.Bundle) -> a
+    void onAttach(android.app.Activity) -> a
+    android.view.animation.Animation onCreateAnimation(int,boolean,int) -> a
+    void onCreate(android.os.Bundle) -> a
+    android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> a
+    void onViewCreated(android.view.View,android.os.Bundle) -> a
+    android.view.View getView() -> k
+    void onActivityCreated(android.os.Bundle) -> d
+    void onStart() -> d
+    void onResume() -> l
+    void onSaveInstanceState(android.os.Bundle) -> e
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    void onPause() -> m
+    void onStop() -> e
+    void onLowMemory() -> onLowMemory
+    void onDestroyView() -> f
+    void onDestroy() -> n
+    void initState() -> o
+    void onDetach() -> c
+    void onCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> a
+    void onPrepareOptionsMenu(android.view.Menu) -> a
+    void onDestroyOptionsMenu() -> p
+    boolean onOptionsItemSelected(android.view.MenuItem) -> a
+    void onOptionsMenuClosed(android.view.Menu) -> b
+    void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo) -> onCreateContextMenu
+    boolean onContextItemSelected(android.view.MenuItem) -> b
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    void performStart() -> q
+    void performStop() -> r
+    void performReallyStop() -> s
+    void performDestroyView() -> t
+android.support.v4.app.Fragment$InstantiationException -> f:
+android.support.v4.app.Fragment$SavedState -> android.support.v4.app.Fragment$SavedState:
+    android.os.Bundle mState -> a
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.Fragment$SavedState$1 -> g:
+    android.support.v4.app.Fragment$SavedState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.Fragment$SavedState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentActivity -> android.support.v4.app.FragmentActivity:
+    android.os.Handler mHandler -> a
+    android.support.v4.app.FragmentManagerImpl mFragments -> b
+    boolean mCreated -> c
+    boolean mResumed -> d
+    boolean mStopped -> e
+    boolean mReallyStopped -> f
+    boolean mRetaining -> g
+    boolean mOptionsMenuInvalidated -> h
+    boolean mCheckedForLoaderManager -> i
+    boolean mLoadersStarted -> j
+    android.support.v4.util.SparseArrayCompat mAllLoaderManagers -> k
+    android.support.v4.app.LoaderManagerImpl mLoaderManager -> l
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void onBackPressed() -> onBackPressed
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onCreatePanelMenu(int,android.view.Menu) -> onCreatePanelMenu
+    android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet) -> onCreateView
+    void onDestroy() -> onDestroy
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void onLowMemory() -> onLowMemory
+    boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
+    void onPanelClosed(int,android.view.Menu) -> onPanelClosed
+    void onPause() -> onPause
+    void onResume() -> onResume
+    void onPostResume() -> onPostResume
+    void onResumeFragments() -> a
+    boolean onPreparePanel(int,android.view.View,android.view.Menu) -> onPreparePanel
+    java.lang.Object onRetainNonConfigurationInstance() -> onRetainNonConfigurationInstance
+    void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+    void onStart() -> onStart
+    void onStop() -> onStop
+    java.lang.Object onRetainCustomNonConfigurationInstance() -> b
+    void supportInvalidateOptionsMenu() -> c
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> dump
+    void doReallyStop(boolean) -> a
+    void onReallyStop() -> d
+    void onAttachFragment(android.support.v4.app.Fragment) -> a
+    android.support.v4.app.FragmentManager getSupportFragmentManager() -> e
+    void startActivityForResult(android.content.Intent,int) -> startActivityForResult
+    void invalidateSupportFragmentIndex(int) -> a
+    android.support.v4.app.LoaderManagerImpl getLoaderManager(int,boolean,boolean) -> a
+android.support.v4.app.FragmentActivity$1 -> h:
+    android.support.v4.app.FragmentActivity this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+android.support.v4.app.FragmentActivity$FragmentTag -> i:
+    int[] Fragment -> a
+android.support.v4.app.FragmentActivity$NonConfigurationInstances -> j:
+    java.lang.Object activity -> a
+    java.lang.Object custom -> b
+    java.util.HashMap children -> c
+    java.util.ArrayList fragments -> d
+    android.support.v4.util.SparseArrayCompat loaders -> e
+android.support.v4.app.FragmentManager -> k:
+    android.support.v4.app.FragmentTransaction beginTransaction() -> a
+    android.support.v4.app.Fragment findFragmentByTag(java.lang.String) -> a
+    void popBackStack(int,int) -> a
+android.support.v4.app.FragmentManager$OnBackStackChangedListener -> l:
+    void onBackStackChanged() -> a
+android.support.v4.app.FragmentManagerImpl -> m:
+    boolean DEBUG -> a
+    boolean HONEYCOMB -> b
+    java.util.ArrayList mPendingActions -> c
+    java.lang.Runnable[] mTmpActions -> d
+    boolean mExecutingActions -> e
+    java.util.ArrayList mActive -> f
+    java.util.ArrayList mAdded -> g
+    java.util.ArrayList mAvailIndices -> h
+    java.util.ArrayList mBackStack -> i
+    java.util.ArrayList mCreatedMenus -> j
+    java.util.ArrayList mBackStackIndices -> k
+    java.util.ArrayList mAvailBackStackIndices -> l
+    java.util.ArrayList mBackStackChangeListeners -> m
+    int mCurState -> n
+    android.support.v4.app.FragmentActivity mActivity -> o
+    boolean mNeedMenuInvalidate -> p
+    boolean mStateSaved -> q
+    boolean mDestroyed -> r
+    java.lang.String mNoTransactionsBecause -> s
+    boolean mHavePendingDeferredStart -> t
+    android.os.Bundle mStateBundle -> u
+    android.util.SparseArray mStateArray -> v
+    java.lang.Runnable mExecCommit -> w
+    android.view.animation.Interpolator DECELERATE_QUINT -> x
+    android.view.animation.Interpolator DECELERATE_CUBIC -> y
+    android.view.animation.Interpolator ACCELERATE_QUINT -> z
+    android.view.animation.Interpolator ACCELERATE_CUBIC -> A
+    android.support.v4.app.FragmentTransaction beginTransaction() -> a
+    boolean executePendingTransactions() -> b
+    boolean popBackStackImmediate() -> c
+    void popBackStack(int,int) -> a
+    void putFragment(android.os.Bundle,java.lang.String,android.support.v4.app.Fragment) -> a
+    android.support.v4.app.Fragment getFragment(android.os.Bundle,java.lang.String) -> a
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    android.view.animation.Animation makeOpenCloseAnimation(android.content.Context,float,float,float,float) -> a
+    android.view.animation.Animation makeFadeAnimation(android.content.Context,float,float) -> a
+    android.view.animation.Animation loadAnimation(android.support.v4.app.Fragment,int,boolean,int) -> a
+    void performPendingDeferredStart(android.support.v4.app.Fragment) -> a
+    void moveToState(android.support.v4.app.Fragment,int,int,int,boolean) -> a
+    void moveToState(android.support.v4.app.Fragment) -> b
+    void moveToState(int,boolean) -> a
+    void moveToState(int,int,int,boolean) -> a
+    void startPendingDeferredFragments() -> d
+    void makeActive(android.support.v4.app.Fragment) -> c
+    void makeInactive(android.support.v4.app.Fragment) -> d
+    void addFragment(android.support.v4.app.Fragment,boolean) -> a
+    void removeFragment(android.support.v4.app.Fragment,int,int) -> a
+    void hideFragment(android.support.v4.app.Fragment,int,int) -> b
+    void showFragment(android.support.v4.app.Fragment,int,int) -> c
+    void detachFragment(android.support.v4.app.Fragment,int,int) -> d
+    void attachFragment(android.support.v4.app.Fragment,int,int) -> e
+    android.support.v4.app.Fragment findFragmentById(int) -> a
+    android.support.v4.app.Fragment findFragmentByTag(java.lang.String) -> a
+    void checkStateLoss() -> s
+    void enqueueAction(java.lang.Runnable,boolean) -> a
+    int allocBackStackIndex(android.support.v4.app.BackStackRecord) -> a
+    void setBackStackIndex(int,android.support.v4.app.BackStackRecord) -> a
+    void freeBackStackIndex(int) -> b
+    boolean execPendingActions() -> e
+    void reportBackStackChanged() -> f
+    void addBackStackState(android.support.v4.app.BackStackRecord) -> b
+    boolean popBackStackState(android.os.Handler,java.lang.String,int,int) -> a
+    java.util.ArrayList retainNonConfig() -> g
+    void saveFragmentViewState(android.support.v4.app.Fragment) -> e
+    android.os.Bundle saveFragmentBasicState(android.support.v4.app.Fragment) -> f
+    android.os.Parcelable saveAllState() -> h
+    void restoreAllState(android.os.Parcelable,java.util.ArrayList) -> a
+    void attachActivity(android.support.v4.app.FragmentActivity) -> a
+    void noteStateNotSaved() -> i
+    void dispatchCreate() -> j
+    void dispatchActivityCreated() -> k
+    void dispatchStart() -> l
+    void dispatchResume() -> m
+    void dispatchPause() -> n
+    void dispatchStop() -> o
+    void dispatchReallyStop() -> p
+    void dispatchDestroy() -> q
+    void dispatchConfigurationChanged(android.content.res.Configuration) -> a
+    void dispatchLowMemory() -> r
+    boolean dispatchCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> a
+    boolean dispatchPrepareOptionsMenu(android.view.Menu) -> a
+    boolean dispatchOptionsItemSelected(android.view.MenuItem) -> a
+    boolean dispatchContextItemSelected(android.view.MenuItem) -> b
+    void dispatchOptionsMenuClosed(android.view.Menu) -> b
+    int reverseTransit(int) -> c
+    int transitToStyleIndex(int,boolean) -> b
+android.support.v4.app.FragmentManagerImpl$1 -> n:
+    android.support.v4.app.FragmentManagerImpl this$0 -> a
+    void run() -> run
+android.support.v4.app.FragmentManagerImpl$4 -> o:
+    int val$id -> a
+    int val$flags -> b
+    android.support.v4.app.FragmentManagerImpl this$0 -> c
+    void run() -> run
+android.support.v4.app.FragmentManagerImpl$5 -> p:
+    android.support.v4.app.Fragment val$fragment -> a
+    android.support.v4.app.FragmentManagerImpl this$0 -> b
+    void onAnimationEnd(android.view.animation.Animation) -> onAnimationEnd
+    void onAnimationRepeat(android.view.animation.Animation) -> onAnimationRepeat
+    void onAnimationStart(android.view.animation.Animation) -> onAnimationStart
+android.support.v4.app.FragmentManagerState -> android.support.v4.app.FragmentManagerState:
+    android.support.v4.app.FragmentState[] mActive -> a
+    int[] mAdded -> b
+    android.support.v4.app.BackStackState[] mBackStack -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.FragmentManagerState$1 -> q:
+    android.support.v4.app.FragmentManagerState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.FragmentManagerState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentState -> android.support.v4.app.FragmentState:
+    java.lang.String mClassName -> a
+    int mIndex -> b
+    boolean mFromLayout -> c
+    int mFragmentId -> d
+    int mContainerId -> e
+    java.lang.String mTag -> f
+    boolean mRetainInstance -> g
+    boolean mDetached -> h
+    android.os.Bundle mArguments -> i
+    android.os.Bundle mSavedFragmentState -> j
+    android.support.v4.app.Fragment mInstance -> k
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    android.support.v4.app.Fragment instantiate(android.support.v4.app.FragmentActivity) -> a
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+android.support.v4.app.FragmentState$1 -> r:
+    android.support.v4.app.FragmentState createFromParcel(android.os.Parcel) -> a
+    android.support.v4.app.FragmentState[] newArray(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+android.support.v4.app.FragmentTransaction -> s:
+    android.support.v4.app.FragmentTransaction add(android.support.v4.app.Fragment,java.lang.String) -> a
+    android.support.v4.app.FragmentTransaction remove(android.support.v4.app.Fragment) -> a
+    android.support.v4.app.FragmentTransaction addToBackStack(java.lang.String) -> a
+    int commit() -> a
+    int commitAllowingStateLoss() -> b
+android.support.v4.app.LoaderManager -> t:
+    boolean hasRunningLoaders() -> a
+android.support.v4.app.LoaderManager$LoaderCallbacks -> u:
+    android.support.v4.content.Loader onCreateLoader(int,android.os.Bundle) -> a
+    void onLoadFinished(android.support.v4.content.Loader,java.lang.Object) -> a
+    void onLoaderReset(android.support.v4.content.Loader) -> a
+android.support.v4.app.LoaderManagerImpl -> v:
+    boolean DEBUG -> a
+    android.support.v4.util.SparseArrayCompat mLoaders -> b
+    android.support.v4.util.SparseArrayCompat mInactiveLoaders -> c
+    android.support.v4.app.FragmentActivity mActivity -> d
+    boolean mStarted -> e
+    boolean mRetaining -> f
+    void updateActivity(android.support.v4.app.FragmentActivity) -> a
+    void doStart() -> b
+    void doStop() -> c
+    void doRetain() -> d
+    void finishRetain() -> e
+    void doReportNextStart() -> f
+    void doReportStart() -> g
+    void doDestroy() -> h
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+    boolean hasRunningLoaders() -> a
+android.support.v4.app.LoaderManagerImpl$LoaderInfo -> w:
+    int mId -> a
+    android.os.Bundle mArgs -> b
+    android.support.v4.app.LoaderManager$LoaderCallbacks mCallbacks -> c
+    android.support.v4.content.Loader mLoader -> d
+    boolean mHaveData -> e
+    boolean mDeliveredData -> f
+    java.lang.Object mData -> g
+    boolean mStarted -> h
+    boolean mRetaining -> i
+    boolean mRetainingStarted -> j
+    boolean mReportNextStart -> k
+    boolean mDestroyed -> l
+    boolean mListenerRegistered -> m
+    android.support.v4.app.LoaderManagerImpl$LoaderInfo mPendingLoader -> n
+    android.support.v4.app.LoaderManagerImpl this$0 -> o
+    void start() -> a
+    void retain() -> b
+    void finishRetain() -> c
+    void reportStart() -> d
+    void stop() -> e
+    void destroy() -> f
+    void callOnLoadFinished(android.support.v4.content.Loader,java.lang.Object) -> a
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+android.support.v4.app.NoSaveStateFrameLayout -> x:
+    android.view.ViewGroup wrap(android.view.View) -> a
+    void dispatchSaveInstanceState(android.util.SparseArray) -> dispatchSaveInstanceState
+    void dispatchRestoreInstanceState(android.util.SparseArray) -> dispatchRestoreInstanceState
+android.support.v4.app.SuperNotCalledException -> y:
+android.support.v4.content.Loader -> z:
+    int mId -> a
+    android.support.v4.content.Loader$OnLoadCompleteListener mListener -> b
+    boolean mStarted -> c
+    boolean mAbandoned -> d
+    boolean mReset -> e
+    boolean mContentChanged -> f
+    void registerListener(int,android.support.v4.content.Loader$OnLoadCompleteListener) -> a
+    void unregisterListener(android.support.v4.content.Loader$OnLoadCompleteListener) -> a
+    void startLoading() -> a
+    void onStartLoading() -> b
+    void stopLoading() -> c
+    void onStopLoading() -> d
+    void reset() -> e
+    void onReset() -> f
+    java.lang.String dataToString(java.lang.Object) -> a
+    java.lang.String toString() -> toString
+    void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
+android.support.v4.content.Loader$OnLoadCompleteListener -> aa:
+android.support.v4.os.ParcelableCompat -> ab:
+    android.os.Parcelable$Creator newCreator(android.support.v4.os.ParcelableCompatCreatorCallbacks) -> a
+android.support.v4.os.ParcelableCompat$CompatCreator -> ac:
+    android.support.v4.os.ParcelableCompatCreatorCallbacks mCallbacks -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+android.support.v4.os.ParcelableCompatCreatorCallbacks -> ad:
+    java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> a
+    java.lang.Object[] newArray(int) -> a
+android.support.v4.os.ParcelableCompatCreatorHoneycombMR2 -> ae:
+    android.support.v4.os.ParcelableCompatCreatorCallbacks mCallbacks -> a
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+    java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> createFromParcel
+    java.lang.Object[] newArray(int) -> newArray
+android.support.v4.os.ParcelableCompatCreatorHoneycombMR2Stub -> af:
+    android.os.Parcelable$Creator instantiate(android.support.v4.os.ParcelableCompatCreatorCallbacks) -> a
+android.support.v4.util.DebugUtils -> ag:
+    void buildShortClassTag(java.lang.Object,java.lang.StringBuilder) -> a
+android.support.v4.util.LogWriter -> ah:
+    java.lang.String mTag -> a
+    java.lang.StringBuilder mBuilder -> b
+    void close() -> close
+    void flush() -> flush
+    void write(char[],int,int) -> write
+    void flushBuilder() -> a
+android.support.v4.util.SparseArrayCompat -> ai:
+    java.lang.Object DELETED -> a
+    boolean mGarbage -> b
+    int[] mKeys -> c
+    java.lang.Object[] mValues -> d
+    int mSize -> e
+    java.lang.Object get(int) -> a
+    java.lang.Object get(int,java.lang.Object) -> a
+    void delete(int) -> b
+    void remove(int) -> c
+    void removeAt(int) -> d
+    void gc() -> c
+    void put(int,java.lang.Object) -> b
+    int size() -> a
+    int keyAt(int) -> e
+    java.lang.Object valueAt(int) -> f
+    void clear() -> b
+    int binarySearch(int[],int,int,int) -> a
+    int idealByteArraySize(int) -> g
+    int idealIntArraySize(int) -> h
+android.support.v4.view.AccessibilityDelegateCompat -> aj:
+    android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateImpl IMPL -> b
+    java.lang.Object DEFAULT_DELEGATE -> c
+    java.lang.Object mBridge -> a
+    java.lang.Object getBridge() -> a
+    void sendAccessibilityEvent(android.view.View,int) -> a
+    void sendAccessibilityEventUnchecked(android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    boolean dispatchPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> b
+    void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> c
+    void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> d
+    void onInitializeAccessibilityNodeInfo(android.view.View,android.support.v4.view.accessibility.AccessibilityNodeInfoCompat) -> a
+    boolean onRequestSendAccessibilityEvent(android.view.ViewGroup,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    android.support.v4.view.accessibility.AccessibilityNodeProviderCompat getAccessibilityNodeProvider(android.view.View) -> a
+    boolean performAccessibilityAction(android.view.View,int,android.os.Bundle) -> a
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateIcsImpl -> ak:
+    java.lang.Object newAccessiblityDelegateDefaultImpl() -> a
+    java.lang.Object newAccessiblityDelegateBridge(android.support.v4.view.AccessibilityDelegateCompat) -> a
+    boolean dispatchPopulateAccessibilityEvent(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void onInitializeAccessibilityEvent(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> b
+    void onInitializeAccessibilityNodeInfo(java.lang.Object,android.view.View,android.support.v4.view.accessibility.AccessibilityNodeInfoCompat) -> a
+    void onPopulateAccessibilityEvent(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> c
+    boolean onRequestSendAccessibilityEvent(java.lang.Object,android.view.ViewGroup,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void sendAccessibilityEvent(java.lang.Object,android.view.View,int) -> a
+    void sendAccessibilityEventUnchecked(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> d
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateIcsImpl$1 -> al:
+    android.support.v4.view.AccessibilityDelegateCompat val$compat -> a
+    android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateIcsImpl this$0 -> b
+    boolean dispatchPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> b
+    void onInitializeAccessibilityNodeInfo(android.view.View,java.lang.Object) -> a
+    void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> c
+    boolean onRequestSendAccessibilityEvent(android.view.ViewGroup,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void sendAccessibilityEvent(android.view.View,int) -> a
+    void sendAccessibilityEventUnchecked(android.view.View,android.view.accessibility.AccessibilityEvent) -> d
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateImpl -> am:
+    java.lang.Object newAccessiblityDelegateDefaultImpl() -> a
+    java.lang.Object newAccessiblityDelegateBridge(android.support.v4.view.AccessibilityDelegateCompat) -> a
+    boolean dispatchPopulateAccessibilityEvent(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void onInitializeAccessibilityEvent(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> b
+    void onInitializeAccessibilityNodeInfo(java.lang.Object,android.view.View,android.support.v4.view.accessibility.AccessibilityNodeInfoCompat) -> a
+    void onPopulateAccessibilityEvent(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> c
+    boolean onRequestSendAccessibilityEvent(java.lang.Object,android.view.ViewGroup,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void sendAccessibilityEvent(java.lang.Object,android.view.View,int) -> a
+    void sendAccessibilityEventUnchecked(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> d
+    android.support.v4.view.accessibility.AccessibilityNodeProviderCompat getAccessibilityNodeProvider(java.lang.Object,android.view.View) -> a
+    boolean performAccessibilityAction(java.lang.Object,android.view.View,int,android.os.Bundle) -> a
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateJellyBeanImpl -> an:
+    java.lang.Object newAccessiblityDelegateBridge(android.support.v4.view.AccessibilityDelegateCompat) -> a
+    android.support.v4.view.accessibility.AccessibilityNodeProviderCompat getAccessibilityNodeProvider(java.lang.Object,android.view.View) -> a
+    boolean performAccessibilityAction(java.lang.Object,android.view.View,int,android.os.Bundle) -> a
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateJellyBeanImpl$1 -> ao:
+    android.support.v4.view.AccessibilityDelegateCompat val$compat -> a
+    android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateJellyBeanImpl this$0 -> b
+    boolean dispatchPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> b
+    void onInitializeAccessibilityNodeInfo(android.view.View,java.lang.Object) -> a
+    void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> c
+    boolean onRequestSendAccessibilityEvent(android.view.ViewGroup,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void sendAccessibilityEvent(android.view.View,int) -> a
+    void sendAccessibilityEventUnchecked(android.view.View,android.view.accessibility.AccessibilityEvent) -> d
+    java.lang.Object getAccessibilityNodeProvider(android.view.View) -> a
+    boolean performAccessibilityAction(android.view.View,int,android.os.Bundle) -> a
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateStubImpl -> ap:
+    java.lang.Object newAccessiblityDelegateDefaultImpl() -> a
+    java.lang.Object newAccessiblityDelegateBridge(android.support.v4.view.AccessibilityDelegateCompat) -> a
+    boolean dispatchPopulateAccessibilityEvent(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void onInitializeAccessibilityEvent(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> b
+    void onInitializeAccessibilityNodeInfo(java.lang.Object,android.view.View,android.support.v4.view.accessibility.AccessibilityNodeInfoCompat) -> a
+    void onPopulateAccessibilityEvent(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> c
+    boolean onRequestSendAccessibilityEvent(java.lang.Object,android.view.ViewGroup,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void sendAccessibilityEvent(java.lang.Object,android.view.View,int) -> a
+    void sendAccessibilityEventUnchecked(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> d
+    android.support.v4.view.accessibility.AccessibilityNodeProviderCompat getAccessibilityNodeProvider(java.lang.Object,android.view.View) -> a
+    boolean performAccessibilityAction(java.lang.Object,android.view.View,int,android.os.Bundle) -> a
+android.support.v4.view.AccessibilityDelegateCompatIcs -> aq:
+    java.lang.Object newAccessibilityDelegateDefaultImpl() -> a
+    java.lang.Object newAccessibilityDelegateBridge(android.support.v4.view.AccessibilityDelegateCompatIcs$AccessibilityDelegateBridge) -> a
+    boolean dispatchPopulateAccessibilityEvent(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void onInitializeAccessibilityEvent(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> b
+    void onInitializeAccessibilityNodeInfo(java.lang.Object,android.view.View,java.lang.Object) -> a
+    void onPopulateAccessibilityEvent(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> c
+    boolean onRequestSendAccessibilityEvent(java.lang.Object,android.view.ViewGroup,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void sendAccessibilityEvent(java.lang.Object,android.view.View,int) -> a
+    void sendAccessibilityEventUnchecked(java.lang.Object,android.view.View,android.view.accessibility.AccessibilityEvent) -> d
+android.support.v4.view.AccessibilityDelegateCompatIcs$1 -> ar:
+    android.support.v4.view.AccessibilityDelegateCompatIcs$AccessibilityDelegateBridge val$bridge -> a
+    boolean dispatchPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> dispatchPopulateAccessibilityEvent
+    void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> onInitializeAccessibilityEvent
+    void onInitializeAccessibilityNodeInfo(android.view.View,android.view.accessibility.AccessibilityNodeInfo) -> onInitializeAccessibilityNodeInfo
+    void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> onPopulateAccessibilityEvent
+    boolean onRequestSendAccessibilityEvent(android.view.ViewGroup,android.view.View,android.view.accessibility.AccessibilityEvent) -> onRequestSendAccessibilityEvent
+    void sendAccessibilityEvent(android.view.View,int) -> sendAccessibilityEvent
+    void sendAccessibilityEventUnchecked(android.view.View,android.view.accessibility.AccessibilityEvent) -> sendAccessibilityEventUnchecked
+android.support.v4.view.AccessibilityDelegateCompatIcs$AccessibilityDelegateBridge -> as:
+    boolean dispatchPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> b
+    void onInitializeAccessibilityNodeInfo(android.view.View,java.lang.Object) -> a
+    void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> c
+    boolean onRequestSendAccessibilityEvent(android.view.ViewGroup,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void sendAccessibilityEvent(android.view.View,int) -> a
+    void sendAccessibilityEventUnchecked(android.view.View,android.view.accessibility.AccessibilityEvent) -> d
+android.support.v4.view.AccessibilityDelegateCompatJellyBean -> at:
+    java.lang.Object newAccessibilityDelegateBridge(android.support.v4.view.AccessibilityDelegateCompatJellyBean$AccessibilityDelegateBridgeJellyBean) -> a
+    java.lang.Object getAccessibilityNodeProvider(java.lang.Object,android.view.View) -> a
+    boolean performAccessibilityAction(java.lang.Object,android.view.View,int,android.os.Bundle) -> a
+android.support.v4.view.AccessibilityDelegateCompatJellyBean$1 -> au:
+    android.support.v4.view.AccessibilityDelegateCompatJellyBean$AccessibilityDelegateBridgeJellyBean val$bridge -> a
+    boolean dispatchPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> dispatchPopulateAccessibilityEvent
+    void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> onInitializeAccessibilityEvent
+    void onInitializeAccessibilityNodeInfo(android.view.View,android.view.accessibility.AccessibilityNodeInfo) -> onInitializeAccessibilityNodeInfo
+    void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> onPopulateAccessibilityEvent
+    boolean onRequestSendAccessibilityEvent(android.view.ViewGroup,android.view.View,android.view.accessibility.AccessibilityEvent) -> onRequestSendAccessibilityEvent
+    void sendAccessibilityEvent(android.view.View,int) -> sendAccessibilityEvent
+    void sendAccessibilityEventUnchecked(android.view.View,android.view.accessibility.AccessibilityEvent) -> sendAccessibilityEventUnchecked
+    android.view.accessibility.AccessibilityNodeProvider getAccessibilityNodeProvider(android.view.View) -> getAccessibilityNodeProvider
+    boolean performAccessibilityAction(android.view.View,int,android.os.Bundle) -> performAccessibilityAction
+android.support.v4.view.AccessibilityDelegateCompatJellyBean$AccessibilityDelegateBridgeJellyBean -> av:
+    boolean dispatchPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> b
+    void onInitializeAccessibilityNodeInfo(android.view.View,java.lang.Object) -> a
+    void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> c
+    boolean onRequestSendAccessibilityEvent(android.view.ViewGroup,android.view.View,android.view.accessibility.AccessibilityEvent) -> a
+    void sendAccessibilityEvent(android.view.View,int) -> a
+    void sendAccessibilityEventUnchecked(android.view.View,android.view.accessibility.AccessibilityEvent) -> d
+    java.lang.Object getAccessibilityNodeProvider(android.view.View) -> a
+    boolean performAccessibilityAction(android.view.View,int,android.os.Bundle) -> a
+android.support.v4.view.KeyEventCompat -> aw:
+    android.support.v4.view.KeyEventCompat$KeyEventVersionImpl IMPL -> a
+    boolean hasModifiers(android.view.KeyEvent,int) -> a
+    boolean hasNoModifiers(android.view.KeyEvent) -> a
+android.support.v4.view.KeyEventCompat$BaseKeyEventVersionImpl -> ax:
+    int metaStateFilterDirectionalModifiers(int,int,int,int,int) -> a
+    int normalizeMetaState(int) -> a
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+android.support.v4.view.KeyEventCompat$HoneycombKeyEventVersionImpl -> ay:
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+android.support.v4.view.KeyEventCompat$KeyEventVersionImpl -> az:
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> b
+android.support.v4.view.KeyEventCompatHoneycomb -> ba:
+    boolean metaStateHasModifiers(int,int) -> a
+    boolean metaStateHasNoModifiers(int) -> a
+android.support.v4.view.MotionEventCompat -> bb:
+    android.support.v4.view.MotionEventCompat$MotionEventVersionImpl IMPL -> a
+    int getActionIndex(android.view.MotionEvent) -> a
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.MotionEventCompat$BaseMotionEventVersionImpl -> bc:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.MotionEventCompat$EclairMotionEventVersionImpl -> bd:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.MotionEventCompat$MotionEventVersionImpl -> be:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.MotionEventCompatEclair -> bf:
+    int findPointerIndex(android.view.MotionEvent,int) -> a
+    int getPointerId(android.view.MotionEvent,int) -> b
+    float getX(android.view.MotionEvent,int) -> c
+    float getY(android.view.MotionEvent,int) -> d
+android.support.v4.view.PagerAdapter -> bg:
+    android.database.DataSetObservable mObservable -> a
+    int getCount() -> a
+    void startUpdate(android.view.ViewGroup) -> a
+    java.lang.Object instantiateItem(android.view.ViewGroup,int) -> a
+    void destroyItem(android.view.ViewGroup,int,java.lang.Object) -> a
+    void setPrimaryItem(android.view.ViewGroup,int,java.lang.Object) -> b
+    void finishUpdate(android.view.ViewGroup) -> b
+    void startUpdate(android.view.View) -> a
+    java.lang.Object instantiateItem(android.view.View,int) -> a
+    void destroyItem(android.view.View,int,java.lang.Object) -> a
+    void setPrimaryItem(android.view.View,int,java.lang.Object) -> b
+    void finishUpdate(android.view.View) -> b
+    boolean isViewFromObject(android.view.View,java.lang.Object) -> a
+    android.os.Parcelable saveState() -> b
+    void restoreState(android.os.Parcelable,java.lang.ClassLoader) -> a
+    int getItemPosition(java.lang.Object) -> a
+    void registerDataSetObserver(android.database.DataSetObserver) -> a
+    void unregisterDataSetObserver(android.database.DataSetObserver) -> b
+    java.lang.CharSequence getPageTitle(int) -> a
+    float getPageWidth(int) -> b
+android.support.v4.view.PagerTabStrip -> android.support.v4.view.PagerTabStrip:
+    int mIndicatorColor -> f
+    int mIndicatorHeight -> g
+    int mMinPaddingBottom -> h
+    int mMinTextSpacing -> i
+    int mMinStripHeight -> j
+    int mTabPadding -> k
+    android.graphics.Paint mTabPaint -> l
+    android.graphics.Rect mTempRect -> m
+    int mTabAlpha -> n
+    boolean mDrawFullUnderline -> o
+    boolean mDrawFullUnderlineSet -> p
+    int mFullUnderlineHeight -> q
+    boolean mIgnoreTap -> r
+    float mInitialMotionX -> s
+    float mInitialMotionY -> t
+    int mTouchSlop -> u
+    void setTabIndicatorColor(int) -> setTabIndicatorColor
+    void setTabIndicatorColorResource(int) -> setTabIndicatorColorResource
+    int getTabIndicatorColor() -> getTabIndicatorColor
+    void setPadding(int,int,int,int) -> setPadding
+    void setTextSpacing(int) -> setTextSpacing
+    void setBackgroundDrawable(android.graphics.drawable.Drawable) -> setBackgroundDrawable
+    void setBackgroundColor(int) -> setBackgroundColor
+    void setBackgroundResource(int) -> setBackgroundResource
+    void setDrawFullUnderline(boolean) -> setDrawFullUnderline
+    boolean getDrawFullUnderline() -> getDrawFullUnderline
+    int getMinHeight() -> getMinHeight
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    void onDraw(android.graphics.Canvas) -> onDraw
+    void updateTextPositions(int,float,boolean) -> a
+android.support.v4.view.PagerTabStrip$1 -> bh:
+    android.support.v4.view.PagerTabStrip this$0 -> a
+    void onClick(android.view.View) -> onClick
+android.support.v4.view.PagerTabStrip$2 -> bi:
+    android.support.v4.view.PagerTabStrip this$0 -> a
+    void onClick(android.view.View) -> onClick
+android.support.v4.view.PagerTitleStrip -> android.support.v4.view.PagerTitleStrip:
+    android.support.v4.view.ViewPager mPager -> a
+    android.widget.TextView mPrevText -> b
+    android.widget.TextView mCurrText -> c
+    android.widget.TextView mNextText -> d
+    int mLastKnownCurrentPage -> f
+    float mLastKnownPositionOffset -> g
+    int mScaledTextSpacing -> h
+    int mGravity -> i
+    boolean mUpdatingText -> j
+    boolean mUpdatingPositions -> k
+    android.support.v4.view.PagerTitleStrip$PageListener mPageListener -> l
+    int[] ATTRS -> m
+    int[] TEXT_ATTRS -> n
+    int mNonPrimaryAlpha -> o
+    int mTextColor -> e
+    android.support.v4.view.PagerTitleStrip$PagerTitleStripImpl IMPL -> p
+    void setSingleLineAllCaps(android.widget.TextView) -> setSingleLineAllCaps
+    void setTextSpacing(int) -> setTextSpacing
+    int getTextSpacing() -> getTextSpacing
+    void setNonPrimaryAlpha(float) -> setNonPrimaryAlpha
+    void setTextColor(int) -> setTextColor
+    void setTextSize(int,float) -> setTextSize
+    void setGravity(int) -> setGravity
+    void onAttachedToWindow() -> onAttachedToWindow
+    void onDetachedFromWindow() -> onDetachedFromWindow
+    void updateText(int,android.support.v4.view.PagerAdapter) -> a
+    void requestLayout() -> requestLayout
+    void updateAdapter(android.support.v4.view.PagerAdapter,android.support.v4.view.PagerAdapter) -> a
+    void updateTextPositions(int,float,boolean) -> a
+    void onMeasure(int,int) -> onMeasure
+    void onLayout(boolean,int,int,int,int) -> onLayout
+    int getMinHeight() -> getMinHeight
+android.support.v4.view.PagerTitleStrip$1 -> bj:
+android.support.v4.view.PagerTitleStrip$PageListener -> bk:
+    int mScrollState -> b
+    android.support.v4.view.PagerTitleStrip this$0 -> a
+    void onPageScrolled(int,float,int) -> a
+    void onPageSelected(int) -> a
+    void onPageScrollStateChanged(int) -> b
+    void onAdapterChanged(android.support.v4.view.PagerAdapter,android.support.v4.view.PagerAdapter) -> a
+    void onChanged() -> onChanged
+android.support.v4.view.PagerTitleStrip$PagerTitleStripImpl -> bl:
+    void setSingleLineAllCaps(android.widget.TextView) -> a
+android.support.v4.view.PagerTitleStrip$PagerTitleStripImplBase -> bm:
+    void setSingleLineAllCaps(android.widget.TextView) -> a
+android.support.v4.view.PagerTitleStrip$PagerTitleStripImplIcs -> bn:
+    void setSingleLineAllCaps(android.widget.TextView) -> a
+android.support.v4.view.PagerTitleStripIcs -> bo:
+    void setSingleLineAllCaps(android.widget.TextView) -> a
+android.support.v4.view.PagerTitleStripIcs$SingleLineAllCapsTransform -> bp:
+    java.util.Locale mLocale -> a
+    java.lang.CharSequence getTransformation(java.lang.CharSequence,android.view.View) -> getTransformation
+android.support.v4.view.VelocityTrackerCompat -> bq:
+    android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl IMPL -> a
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.VelocityTrackerCompat$BaseVelocityTrackerVersionImpl -> br:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.VelocityTrackerCompat$HoneycombVelocityTrackerVersionImpl -> bs:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.VelocityTrackerCompat$VelocityTrackerVersionImpl -> bt:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.VelocityTrackerCompatHoneycomb -> bu:
+    float getXVelocity(android.view.VelocityTracker,int) -> a
+android.support.v4.view.ViewCompat -> bv:
+    android.support.v4.view.ViewCompat$ViewCompatImpl IMPL -> a
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+    void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat) -> a
+    void postInvalidateOnAnimation(android.view.View) -> b
+    int getImportantForAccessibility(android.view.View) -> c
+    void setImportantForAccessibility(android.view.View,int) -> b
+android.support.v4.view.ViewCompat$BaseViewCompatImpl -> bw:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+    void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat) -> a
+    void postInvalidateOnAnimation(android.view.View) -> b
+    long getFrameTime() -> a
+    int getImportantForAccessibility(android.view.View) -> c
+    void setImportantForAccessibility(android.view.View,int) -> b
+android.support.v4.view.ViewCompat$GBViewCompatImpl -> bx:
+    int getOverScrollMode(android.view.View) -> a
+android.support.v4.view.ViewCompat$HCViewCompatImpl -> by:
+    long getFrameTime() -> a
+android.support.v4.view.ViewCompat$ICSViewCompatImpl -> bz:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat) -> a
+android.support.v4.view.ViewCompat$JBViewCompatImpl -> ca:
+    void postInvalidateOnAnimation(android.view.View) -> b
+    int getImportantForAccessibility(android.view.View) -> c
+    void setImportantForAccessibility(android.view.View,int) -> b
+android.support.v4.view.ViewCompat$ViewCompatImpl -> cb:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    int getOverScrollMode(android.view.View) -> a
+    void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat) -> a
+    void postInvalidateOnAnimation(android.view.View) -> b
+    int getImportantForAccessibility(android.view.View) -> c
+    void setImportantForAccessibility(android.view.View,int) -> b
+android.support.v4.view.ViewCompatGingerbread -> cc:
+    int getOverScrollMode(android.view.View) -> a
+android.support.v4.view.ViewCompatHC -> cd:
+    long getFrameTime() -> a
+android.support.v4.view.ViewCompatICS -> ce:
+    boolean canScrollHorizontally(android.view.View,int) -> a
+    void setAccessibilityDelegate(android.view.View,java.lang.Object) -> a
+android.support.v4.view.ViewCompatJB -> cf:
+    void postInvalidateOnAnimation(android.view.View) -> a
+    int getImportantForAccessibility(android.view.View) -> b
+    void setImportantForAccessibility(android.view.View,int) -> a
+android.support.v4.view.ViewConfigurationCompat -> cg:
+    android.support.v4.view.ViewConfigurationCompat$ViewConfigurationVersionImpl IMPL -> a
+    int getScaledPagingTouchSlop(android.view.ViewConfiguration) -> a
+android.support.v4.view.ViewConfigurationCompat$BaseViewConfigurationVersionImpl -> ch:
+    int getScaledPagingTouchSlop(android.view.ViewConfiguration) -> a
+android.support.v4.view.ViewConfigurationCompat$FroyoViewConfigurationVersionImpl -> ci:
+    int getScaledPagingTouchSlop(android.view.ViewConfiguration) -> a
+android.support.v4.view.ViewConfigurationCompat$ViewConfigurationVersionImpl -> cj:
+    int getScaledPagingTouchSlop(android.view.ViewConfiguration) -> a
+android.support.v4.view.ViewConfigurationCompatFroyo -> ck:
+    int getScaledPagingTouchSlop(android.view.ViewConfiguration) -> a
+android.support.v4.view.ViewPager -> android.support.v4.view.ViewPager:
+    int[] LAYOUT_ATTRS -> a
+    java.util.Comparator COMPARATOR -> b
+    android.view.animation.Interpolator sInterpolator -> c
+    java.util.ArrayList mItems -> d
+    android.support.v4.view.ViewPager$ItemInfo mTempItem -> e
+    android.graphics.Rect mTempRect -> f
+    android.support.v4.view.PagerAdapter mAdapter -> g
+    int mCurItem -> h
+    int mRestoredCurItem -> i
+    android.os.Parcelable mRestoredAdapterState -> j
+    java.lang.ClassLoader mRestoredClassLoader -> k
+    android.widget.Scroller mScroller -> l
+    android.support.v4.view.ViewPager$PagerObserver mObserver -> m
+    int mPageMargin -> n
+    android.graphics.drawable.Drawable mMarginDrawable -> o
+    int mTopPageBounds -> p
+    int mBottomPageBounds -> q
+    float mFirstOffset -> r
+    float mLastOffset -> s
+    int mChildWidthMeasureSpec -> t
+    int mChildHeightMeasureSpec -> u
+    boolean mInLayout -> v
+    boolean mScrollingCacheEnabled -> w
+    boolean mPopulatePending -> x
+    int mOffscreenPageLimit -> y
+    boolean mIsBeingDragged -> z
+    boolean mIsUnableToDrag -> A
+    int mDefaultGutterSize -> B
+    int mGutterSize -> C
+    int mTouchSlop -> D
+    float mInitialMotionX -> E
+    float mLastMotionX -> F
+    float mLastMotionY -> G
+    int mActivePointerId -> H
+    android.view.VelocityTracker mVelocityTracker -> I
+    int mMinimumVelocity -> J
+    int mMaximumVelocity -> K
+    int mFlingDistance -> L
+    int mCloseEnough -> M
+    boolean mFakeDragging -> N
+    android.support.v4.widget.EdgeEffectCompat mLeftEdge -> O
+    android.support.v4.widget.EdgeEffectCompat mRightEdge -> P
+    boolean mFirstLayout -> Q
+    boolean mNeedCalculatePageOffsets -> R
+    boolean mCalledSuper -> S
+    int mDecorChildCount -> T
+    android.support.v4.view.ViewPager$OnPageChangeListener mOnPageChangeListener -> U
+    android.support.v4.view.ViewPager$OnPageChangeListener mInternalPageChangeListener -> V
+    android.support.v4.view.ViewPager$OnAdapterChangeListener mAdapterChangeListener -> W
+    int mScrollState -> Z
+    void initViewPager() -> a
+    void setScrollState(int) -> setScrollState
+    void setAdapter(android.support.v4.view.PagerAdapter) -> setAdapter
+    void removeNonDecorViews() -> g
+    android.support.v4.view.PagerAdapter getAdapter() -> getAdapter
+    void setOnAdapterChangeListener(android.support.v4.view.ViewPager$OnAdapterChangeListener) -> setOnAdapterChangeListener
+    void setCurrentItem(int) -> setCurrentItem
+    void setCurrentItem(int,boolean) -> setCurrentItem
+    int getCurrentItem() -> getCurrentItem
+    void setCurrentItemInternal(int,boolean,boolean) -> a
+    void setCurrentItemInternal(int,boolean,boolean,int) -> a
+    void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener) -> setOnPageChangeListener
+    android.support.v4.view.ViewPager$OnPageChangeListener setInternalPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener) -> a
+    int getOffscreenPageLimit() -> getOffscreenPageLimit
+    void setOffscreenPageLimit(int) -> setOffscreenPageLimit
+    void setPageMargin(int) -> setPageMargin
+    int getPageMargin() -> getPageMargin
+    void setPageMarginDrawable(android.graphics.drawable.Drawable) -> setPageMarginDrawable
+    void setPageMarginDrawable(int) -> setPageMarginDrawable
+    boolean verifyDrawable(android.graphics.drawable.Drawable) -> verifyDrawable
+    void drawableStateChanged() -> drawableStateChanged
+    float distanceInfluenceForSnapDuration(float) -> a
+    void smoothScrollTo(int,int,int) -> a
+    android.support.v4.view.ViewPager$ItemInfo addNewItem(int,int) -> a
+    void dataSetChanged() -> b
+    void populate() -> c
+    void populate(int) -> a
+    void calculatePageOffsets(android.support.v4.view.ViewPager$ItemInfo,int,android.support.v4.view.ViewPager$ItemInfo) -> a
+    android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
+    void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
+    void addView(android.view.View,int,android.view.ViewGroup$LayoutParams) -> addView
+    android.support.v4.view.ViewPager$ItemInfo infoForChild(android.view.View) -> a
+    android.support.v4.view.ViewPager$ItemInfo infoForAnyChild(android.view.View) -> b
+    android.support.v4.view.ViewPager$ItemInfo infoForPosition(int) -> b
+    void onAttachedToWindow() -> onAttachedToWindow
+    void onMeasure(int,int) -> onMeasure
+    void onSizeChanged(int,int,int,int) -> onSizeChanged
+    void recomputeScrollPosition(int,int,int,int) -> a
+    void onLayout(boolean,int,int,int,int) -> onLayout
+    void computeScroll() -> computeScroll
+    boolean pageScrolled(int) -> d
+    void onPageScrolled(int,float,int) -> a
+    void completeScroll() -> h
+    boolean isGutterDrag(float,float) -> a
+    boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    boolean performDrag(float) -> b
+    android.support.v4.view.ViewPager$ItemInfo infoForCurrentScrollPosition() -> i
+    int determineTargetPage(int,float,int,int) -> a
+    void draw(android.graphics.Canvas) -> draw
+    void onDraw(android.graphics.Canvas) -> onDraw
+    void onSecondaryPointerUp(android.view.MotionEvent) -> a
+    void endDrag() -> j
+    void setScrollingCacheEnabled(boolean) -> setScrollingCacheEnabled
+    boolean canScroll(android.view.View,boolean,int,int,int) -> a
+    boolean dispatchKeyEvent(android.view.KeyEvent) -> dispatchKeyEvent
+    boolean executeKeyEvent(android.view.KeyEvent) -> a
+    boolean arrowScroll(int) -> c
+    android.graphics.Rect getChildRectInPagerCoordinates(android.graphics.Rect,android.view.View) -> a
+    boolean pageLeft() -> d
+    boolean pageRight() -> e
+    void addFocusables(java.util.ArrayList,int,int) -> addFocusables
+    void addTouchables(java.util.ArrayList) -> addTouchables
+    boolean onRequestFocusInDescendants(int,android.graphics.Rect) -> onRequestFocusInDescendants
+    boolean dispatchPopulateAccessibilityEvent(android.view.accessibility.AccessibilityEvent) -> dispatchPopulateAccessibilityEvent
+    android.view.ViewGroup$LayoutParams generateDefaultLayoutParams() -> generateDefaultLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.view.ViewGroup$LayoutParams) -> generateLayoutParams
+    boolean checkLayoutParams(android.view.ViewGroup$LayoutParams) -> checkLayoutParams
+    android.view.ViewGroup$LayoutParams generateLayoutParams(android.util.AttributeSet) -> generateLayoutParams
+    android.support.v4.view.PagerAdapter access$100(android.support.v4.view.ViewPager) -> a
+    int access$200(android.support.v4.view.ViewPager) -> b
+    int[] access$300() -> f
+android.support.v4.view.ViewPager$1 -> cl:
+    int compare(android.support.v4.view.ViewPager$ItemInfo,android.support.v4.view.ViewPager$ItemInfo) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+android.support.v4.view.ViewPager$2 -> cm:
+    float getInterpolation(float) -> getInterpolation
+android.support.v4.view.ViewPager$Decor -> cn:
+android.support.v4.view.ViewPager$ItemInfo -> co:
+    java.lang.Object object -> a
+    int position -> b
+    boolean scrolling -> c
+    float widthFactor -> d
+    float offset -> e
+android.support.v4.view.ViewPager$LayoutParams -> android.support.v4.view.ViewPager$LayoutParams:
+    boolean isDecor -> a
+    int gravity -> b
+    float widthFactor -> c
+    boolean needsMeasure -> d
+android.support.v4.view.ViewPager$MyAccessibilityDelegate -> cp:
+    android.support.v4.view.ViewPager this$0 -> b
+    void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent) -> d
+    void onInitializeAccessibilityNodeInfo(android.view.View,android.support.v4.view.accessibility.AccessibilityNodeInfoCompat) -> a
+    boolean performAccessibilityAction(android.view.View,int,android.os.Bundle) -> a
+android.support.v4.view.ViewPager$OnAdapterChangeListener -> cq:
+    void onAdapterChanged(android.support.v4.view.PagerAdapter,android.support.v4.view.PagerAdapter) -> a
+android.support.v4.view.ViewPager$OnPageChangeListener -> cr:
+    void onPageScrolled(int,float,int) -> a
+    void onPageSelected(int) -> a
+    void onPageScrollStateChanged(int) -> b
+android.support.v4.view.ViewPager$PagerObserver -> cs:
+    android.support.v4.view.ViewPager this$0 -> a
+    void onChanged() -> onChanged
+    void onInvalidated() -> onInvalidated
+android.support.v4.view.ViewPager$SavedState -> android.support.v4.view.ViewPager$SavedState:
+    int position -> a
+    android.os.Parcelable adapterState -> b
+    java.lang.ClassLoader loader -> c
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    java.lang.String toString() -> toString
+android.support.v4.view.ViewPager$SavedState$1 -> ct:
+    android.support.v4.view.ViewPager$SavedState createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> b
+    android.support.v4.view.ViewPager$SavedState[] newArray(int) -> b
+    java.lang.Object[] newArray(int) -> a
+    java.lang.Object createFromParcel(android.os.Parcel,java.lang.ClassLoader) -> a
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat -> cu:
+    android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoImpl IMPL -> a
+    java.lang.Object mInfo -> b
+    java.lang.Object getInfo() -> a
+    void addAction(int) -> a
+    void setScrollable(boolean) -> a
+    void setClassName(java.lang.CharSequence) -> a
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoIcsImpl -> cv:
+    void addAction(java.lang.Object,int) -> a
+    void setClassName(java.lang.Object,java.lang.CharSequence) -> a
+    void setScrollable(java.lang.Object,boolean) -> a
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoImpl -> cw:
+    void addAction(java.lang.Object,int) -> a
+    void setScrollable(java.lang.Object,boolean) -> a
+    void setClassName(java.lang.Object,java.lang.CharSequence) -> a
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoJellybeanImpl -> cx:
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoStubImpl -> cy:
+    void addAction(java.lang.Object,int) -> a
+    void setClassName(java.lang.Object,java.lang.CharSequence) -> a
+    void setScrollable(java.lang.Object,boolean) -> a
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompatIcs -> cz:
+    void addAction(java.lang.Object,int) -> a
+    void setClassName(java.lang.Object,java.lang.CharSequence) -> a
+    void setScrollable(java.lang.Object,boolean) -> a
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat -> da:
+    android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderImpl IMPL -> a
+    java.lang.Object mProvider -> b
+    java.lang.Object getProvider() -> a
+    android.support.v4.view.accessibility.AccessibilityNodeInfoCompat createAccessibilityNodeInfo(int) -> a
+    boolean performAction(int,int,android.os.Bundle) -> a
+    java.util.List findAccessibilityNodeInfosByText(java.lang.String,int) -> a
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderImpl -> db:
+    java.lang.Object newAccessibilityNodeProviderBridge(android.support.v4.view.accessibility.AccessibilityNodeProviderCompat) -> a
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderJellyBeanImpl -> dc:
+    java.lang.Object newAccessibilityNodeProviderBridge(android.support.v4.view.accessibility.AccessibilityNodeProviderCompat) -> a
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderJellyBeanImpl$1 -> dd:
+    android.support.v4.view.accessibility.AccessibilityNodeProviderCompat val$compat -> a
+    android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderJellyBeanImpl this$0 -> b
+    boolean performAction(int,int,android.os.Bundle) -> a
+    java.util.List findAccessibilityNodeInfosByText(java.lang.String,int) -> a
+    java.lang.Object createAccessibilityNodeInfo(int) -> a
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderStubImpl -> de:
+    java.lang.Object newAccessibilityNodeProviderBridge(android.support.v4.view.accessibility.AccessibilityNodeProviderCompat) -> a
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompatJellyBean -> df:
+    java.lang.Object newAccessibilityNodeProviderBridge(android.support.v4.view.accessibility.AccessibilityNodeProviderCompatJellyBean$AccessibilityNodeInfoBridge) -> a
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompatJellyBean$1 -> dg:
+    android.support.v4.view.accessibility.AccessibilityNodeProviderCompatJellyBean$AccessibilityNodeInfoBridge val$bridge -> a
+    android.view.accessibility.AccessibilityNodeInfo createAccessibilityNodeInfo(int) -> createAccessibilityNodeInfo
+    java.util.List findAccessibilityNodeInfosByText(java.lang.String,int) -> findAccessibilityNodeInfosByText
+    boolean performAction(int,int,android.os.Bundle) -> performAction
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompatJellyBean$AccessibilityNodeInfoBridge -> dh:
+    java.lang.Object createAccessibilityNodeInfo(int) -> a
+    boolean performAction(int,int,android.os.Bundle) -> a
+    java.util.List findAccessibilityNodeInfosByText(java.lang.String,int) -> a
+android.support.v4.widget.EdgeEffectCompat -> di:
+    java.lang.Object mEdgeEffect -> a
+    android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl IMPL -> b
+    void setSize(int,int) -> a
+    boolean isFinished() -> a
+    void finish() -> b
+    boolean onPull(float) -> a
+    boolean onRelease() -> c
+    boolean draw(android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$BaseEdgeEffectImpl -> dj:
+    java.lang.Object newEdgeEffect(android.content.Context) -> a
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectIcsImpl -> dk:
+    java.lang.Object newEdgeEffect(android.content.Context) -> a
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl -> dl:
+    java.lang.Object newEdgeEffect(android.content.Context) -> a
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+android.support.v4.widget.EdgeEffectCompatIcs -> dm:
+    java.lang.Object newEdgeEffect(android.content.Context) -> a
+    void setSize(java.lang.Object,int,int) -> a
+    boolean isFinished(java.lang.Object) -> a
+    void finish(java.lang.Object) -> b
+    boolean onPull(java.lang.Object,float) -> a
+    boolean onRelease(java.lang.Object) -> c
+    boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+com.facebook.android.AsyncFacebookRunner -> dn:
+    com.facebook.android.Facebook fb -> a
+com.facebook.android.DialogError -> do:
+    int mErrorCode -> a
+    java.lang.String mFailingUrl -> b
+com.facebook.android.Facebook -> dp:
+    android.net.Uri ATTRIBUTION_ID_CONTENT_URI -> a
+    java.lang.String DIALOG_BASE_URL -> b
+    java.lang.String GRAPH_BASE_URL -> c
+    java.lang.String RESTSERVER_URL -> d
+    java.lang.String mAccessToken -> e
+    long mLastAccessUpdate -> f
+    long mAccessExpires -> g
+    java.lang.String mAppId -> h
+    android.app.Activity mAuthActivity -> i
+    java.lang.String[] mAuthPermissions -> j
+    int mAuthActivityCode -> k
+    com.facebook.android.Facebook$DialogListener mAuthDialogListener -> l
+    long REFRESH_TOKEN_BARRIER -> m
+    boolean shouldAutoPublishInstall -> n
+    com.facebook.android.Facebook$AutoPublishAsyncTask mAutoPublishAsyncTask -> o
+    void authorize(android.app.Activity,com.facebook.android.Facebook$DialogListener) -> a
+    void authorize(android.app.Activity,java.lang.String[],int,com.facebook.android.Facebook$DialogListener) -> a
+    boolean startSingleSignOn(android.app.Activity,java.lang.String,java.lang.String[],int) -> a
+    boolean validateActivityIntent(android.content.Context,android.content.Intent) -> a
+    boolean validateAppSignatureForPackage(android.content.Context,java.lang.String) -> a
+    void startDialogAuth(android.app.Activity,java.lang.String[]) -> a
+    void authorizeCallback(int,int,android.content.Intent) -> a
+    java.lang.String request(java.lang.String,android.os.Bundle) -> a
+    java.lang.String request(java.lang.String,android.os.Bundle,java.lang.String) -> a
+    void dialog(android.content.Context,java.lang.String,android.os.Bundle,com.facebook.android.Facebook$DialogListener) -> a
+    boolean isSessionValid() -> a
+    java.lang.String getAccessToken() -> b
+    long getAccessExpires() -> c
+    void setAccessToken(java.lang.String) -> a
+    void setAccessExpires(long) -> a
+    void setAccessExpiresIn(java.lang.String) -> b
+    java.lang.String getAttributionId(android.content.ContentResolver) -> a
+    boolean getShouldAutoPublishInstall() -> d
+    void publishInstall(com.facebook.android.Facebook,java.lang.String,android.content.Context) -> b
+    void autoPublishAsync(android.content.Context) -> a
+    void access$1(com.facebook.android.Facebook,java.lang.String,android.content.Context) -> a
+    void access$2(com.facebook.android.Facebook,com.facebook.android.Facebook$AutoPublishAsyncTask) -> a
+    com.facebook.android.Facebook$DialogListener access$3(com.facebook.android.Facebook) -> a
+com.facebook.android.Facebook$1 -> dq:
+    com.facebook.android.Facebook this$0 -> a
+    void onComplete(android.os.Bundle) -> a
+    void onError(com.facebook.android.DialogError) -> a
+    void onFacebookError(com.facebook.android.FacebookError) -> a
+    void onCancel() -> a
+com.facebook.android.Facebook$AutoPublishAsyncTask -> dr:
+    java.lang.String mApplicationId -> b
+    android.content.Context mApplicationContext -> c
+    com.facebook.android.Facebook this$0 -> a
+    java.lang.Void doInBackground(java.lang.Void[]) -> a
+    void onPostExecute(java.lang.Void) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+com.facebook.android.Facebook$DialogListener -> ds:
+    void onComplete(android.os.Bundle) -> a
+    void onFacebookError(com.facebook.android.FacebookError) -> a
+    void onError(com.facebook.android.DialogError) -> a
+    void onCancel() -> a
+com.facebook.android.FacebookError -> dt:
+    int mErrorCode -> a
+    java.lang.String mErrorType -> b
+com.facebook.android.FbDialog -> du:
+    float[] DIMENSIONS_DIFF_LANDSCAPE -> a
+    float[] DIMENSIONS_DIFF_PORTRAIT -> b
+    android.widget.FrameLayout$LayoutParams FILL -> c
+    java.lang.String mUrl -> d
+    com.facebook.android.Facebook$DialogListener mListener -> e
+    android.app.ProgressDialog mSpinner -> f
+    android.widget.ImageView mCrossImage -> g
+    android.webkit.WebView mWebView -> h
+    android.widget.FrameLayout mContent -> i
+    void onCreate(android.os.Bundle) -> onCreate
+    void createCrossImage() -> a
+    void setUpWebView(int) -> a
+    com.facebook.android.Facebook$DialogListener access$0(com.facebook.android.FbDialog) -> a
+    android.app.ProgressDialog access$1(com.facebook.android.FbDialog) -> b
+    android.widget.FrameLayout access$2(com.facebook.android.FbDialog) -> c
+    android.webkit.WebView access$3(com.facebook.android.FbDialog) -> d
+    android.widget.ImageView access$4(com.facebook.android.FbDialog) -> e
+com.facebook.android.FbDialog$1 -> dv:
+    com.facebook.android.FbDialog this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.facebook.android.FbDialog$FbWebViewClient -> dw:
+    com.facebook.android.FbDialog this$0 -> a
+    boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String) -> shouldOverrideUrlLoading
+    void onReceivedError(android.webkit.WebView,int,java.lang.String,java.lang.String) -> onReceivedError
+    void onPageStarted(android.webkit.WebView,java.lang.String,android.graphics.Bitmap) -> onPageStarted
+    void onPageFinished(android.webkit.WebView,java.lang.String) -> onPageFinished
+com.facebook.android.R -> dx:
+com.facebook.android.R$drawable -> dy:
+    int abc -> abc
+    int ap -> ap
+    int arrow -> arrow
+    int bbc -> bbc
+    int bottom_shadow -> bottom_shadow
+    int cbc -> cbc
+    int cbs -> cbs
+    int close -> close
+    int cnn -> cnn
+    int down_arrow -> down_arrow
+    int facebook_icon -> facebook_icon
+    int fox -> fox
+    int frame1 -> frame1
+    int frame10 -> frame10
+    int frame11 -> frame11
+    int frame12 -> frame12
+    int frame13 -> frame13
+    int frame14 -> frame14
+    int frame15 -> frame15
+    int frame16 -> frame16
+    int frame17 -> frame17
+    int frame18 -> frame18
+    int frame19 -> frame19
+    int frame2 -> frame2
+    int frame20 -> frame20
+    int frame21 -> frame21
+    int frame22 -> frame22
+    int frame23 -> frame23
+    int frame24 -> frame24
+    int frame3 -> frame3
+    int frame4 -> frame4
+    int frame5 -> frame5
+    int frame6 -> frame6
+    int frame7 -> frame7
+    int frame8 -> frame8
+    int frame9 -> frame9
+    int fshare -> fshare
+    int google -> google
+    int ic_action_search -> ic_action_search
+    int ic_launcher -> ic_launcher
+    int ic_menu_home -> ic_menu_home
+    int ic_menu_preferences -> ic_menu_preferences
+    int ic_menu_refresh -> ic_menu_refresh
+    int loading_png -> loading_png
+    int nbc -> nbc
+    int postd -> postd
+    int reuters -> reuters
+    int right_arrow -> right_arrow
+    int text_view_background -> text_view_background
+    int time -> time
+    int top_shadow -> top_shadow
+    int tweet -> tweet
+    int up_arrow -> up_arrow
+    int usatoday -> usatoday
+    int wn -> wn
+    int yahoo -> yahoo
+com.facebook.android.Util -> dz:
+    boolean ENABLE_LOG -> a
+    java.lang.String encodePostBody(android.os.Bundle,java.lang.String) -> a
+    java.lang.String encodeUrl(android.os.Bundle) -> a
+    android.os.Bundle decodeUrl(java.lang.String) -> a
+    android.os.Bundle parseUrl(java.lang.String) -> b
+    java.lang.String openUrl(java.lang.String,java.lang.String,android.os.Bundle) -> a
+    java.lang.String read(java.io.InputStream) -> a
+    org.json.JSONObject parseJson(java.lang.String) -> c
+    void showAlert(android.content.Context,java.lang.String,java.lang.String) -> a
+    void logd(java.lang.String,java.lang.String) -> a
+com.rosaloves.bitlyj.Bitly -> ea:
+    com.rosaloves.bitlyj.Bitly$Provider as(java.lang.String,java.lang.String) -> a
+    com.rosaloves.bitlyj.BitlyMethod shorten(java.lang.String) -> a
+com.rosaloves.bitlyj.Bitly$Provider -> eb:
+    java.lang.Object call(com.rosaloves.bitlyj.BitlyMethod) -> a
+    java.lang.String getUrl() -> a
+com.rosaloves.bitlyj.BitlyException -> ec:
+com.rosaloves.bitlyj.BitlyMethod -> ed:
+    java.lang.String getName() -> a
+    java.lang.Iterable getParameters() -> b
+    java.lang.Object apply(com.rosaloves.bitlyj.Bitly$Provider,org.w3c.dom.Document) -> a
+com.rosaloves.bitlyj.MethodBase -> ee:
+    java.lang.String name -> a
+    java.lang.Iterable parameters -> b
+    java.lang.String getName() -> a
+    java.lang.Iterable getParameters() -> b
+    java.lang.String toString() -> toString
+com.rosaloves.bitlyj.Methods -> ef:
+    com.rosaloves.bitlyj.BitlyMethod shorten(java.lang.String) -> a
+    com.rosaloves.bitlyj.ShortenedUrl parseShortenedUrl(com.rosaloves.bitlyj.Bitly$Provider,org.w3c.dom.Node) -> a
+com.rosaloves.bitlyj.Methods$5 -> eg:
+    com.rosaloves.bitlyj.ShortenedUrl apply(com.rosaloves.bitlyj.Bitly$Provider,org.w3c.dom.Document) -> b
+    java.lang.Object apply(com.rosaloves.bitlyj.Bitly$Provider,org.w3c.dom.Document) -> a
+com.rosaloves.bitlyj.ShortenedUrl -> eh:
+    boolean newHash -> a
+    java.lang.String toString() -> toString
+com.rosaloves.bitlyj.SimpleProvider -> ei:
+    java.lang.String url -> a
+    java.lang.String user -> b
+    java.lang.String apiKey -> c
+    java.lang.String endPoint -> d
+    java.lang.Object call(com.rosaloves.bitlyj.BitlyMethod) -> a
+    java.lang.String getUrl() -> a
+    java.lang.String toString() -> toString
+    java.lang.String getUrlForCall(com.rosaloves.bitlyj.BitlyMethod) -> b
+    org.w3c.dom.Document filterErrorResponse(org.w3c.dom.Document) -> a
+    org.w3c.dom.Document fetchUrl(java.lang.String) -> a
+com.rosaloves.bitlyj.Url -> ej:
+    java.lang.String shortBase -> a
+    java.lang.String globalHash -> b
+    java.lang.String userHash -> c
+    java.lang.String shortUrl -> d
+    java.lang.String longUrl -> e
+    java.lang.String getGlobalHash() -> a
+    java.lang.String getUserHash() -> b
+    java.lang.String getShortUrl() -> c
+    java.lang.String getLongUrl() -> d
+    java.lang.String toString() -> toString
+com.rosaloves.bitlyj.data.Pair -> ek:
+    java.lang.Object one -> a
+    java.lang.Object two -> b
+    com.rosaloves.bitlyj.data.Pair p(java.lang.Object,java.lang.Object) -> a
+    java.lang.Object getOne() -> a
+    java.lang.Object getTwo() -> b
+    java.lang.String toString() -> toString
+com.rosaloves.bitlyj.utils.Dom -> el:
+    java.lang.String getTextContent(org.w3c.dom.Node) -> a
+org.jsoup.Jsoup -> em:
+    org.jsoup.nodes.Document parse(java.lang.String) -> a
+org.jsoup.helper.DescendableLinkedList -> en:
+    void push(java.lang.Object) -> push
+    java.lang.Object peekLast() -> peekLast
+    java.lang.Object pollLast() -> pollLast
+    java.util.Iterator descendingIterator() -> descendingIterator
+org.jsoup.helper.DescendableLinkedList$1 -> eo:
+org.jsoup.helper.DescendableLinkedList$DescendingIterator -> ep:
+    java.util.ListIterator iter -> b
+    org.jsoup.helper.DescendableLinkedList this$0 -> a
+    boolean hasNext() -> hasNext
+    java.lang.Object next() -> next
+    void remove() -> remove
+org.jsoup.helper.StringUtil -> eq:
+    java.lang.String[] padding -> a
+    java.lang.String padding(int) -> a
+    boolean isBlank(java.lang.String) -> a
+    boolean isWhitespace(int) -> b
+    java.lang.String normaliseWhitespace(java.lang.String) -> b
+    boolean in(java.lang.String,java.lang.String[]) -> a
+org.jsoup.helper.Validate -> er:
+    void notNull(java.lang.Object) -> a
+    void notNull(java.lang.Object,java.lang.String) -> a
+    void isTrue(boolean) -> a
+    void isFalse(boolean) -> b
+    void isFalse(boolean,java.lang.String) -> a
+    void noNullElements(java.lang.Object[]) -> a
+    void noNullElements(java.lang.Object[],java.lang.String) -> a
+    void notEmpty(java.lang.String) -> a
+    void fail(java.lang.String) -> b
+org.jsoup.nodes.Attribute -> es:
+    java.lang.String key -> a
+    java.lang.String value -> b
+    java.lang.String getKey() -> a
+    java.lang.String getValue() -> b
+    java.lang.String setValue(java.lang.String) -> a
+    java.lang.String html() -> c
+    void html(java.lang.StringBuilder,org.jsoup.nodes.Document$OutputSettings) -> a
+    java.lang.String toString() -> toString
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    org.jsoup.nodes.Attribute clone() -> d
+    java.lang.Object clone() -> clone
+    java.lang.Object setValue(java.lang.Object) -> setValue
+    java.lang.Object getValue() -> getValue
+    java.lang.Object getKey() -> getKey
+org.jsoup.nodes.Attributes -> et:
+    java.util.LinkedHashMap attributes -> a
+    java.lang.String get(java.lang.String) -> a
+    void put(java.lang.String,java.lang.String) -> a
+    void put(org.jsoup.nodes.Attribute) -> a
+    boolean hasKey(java.lang.String) -> b
+    int size() -> a
+    void addAll(org.jsoup.nodes.Attributes) -> a
+    java.util.Iterator iterator() -> iterator
+    java.util.List asList() -> b
+    java.lang.String html() -> c
+    void html(java.lang.StringBuilder,org.jsoup.nodes.Document$OutputSettings) -> a
+    java.lang.String toString() -> toString
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    org.jsoup.nodes.Attributes clone() -> d
+    java.lang.Object clone() -> clone
+org.jsoup.nodes.Comment -> eu:
+    java.lang.String nodeName() -> a
+    java.lang.String getData() -> b
+    void outerHtmlHead(java.lang.StringBuilder,int,org.jsoup.nodes.Document$OutputSettings) -> a
+    void outerHtmlTail(java.lang.StringBuilder,int,org.jsoup.nodes.Document$OutputSettings) -> b
+    java.lang.String toString() -> toString
+org.jsoup.nodes.DataNode -> ev:
+    java.lang.String nodeName() -> a
+    java.lang.String getWholeData() -> b
+    void outerHtmlHead(java.lang.StringBuilder,int,org.jsoup.nodes.Document$OutputSettings) -> a
+    void outerHtmlTail(java.lang.StringBuilder,int,org.jsoup.nodes.Document$OutputSettings) -> b
+    java.lang.String toString() -> toString
+org.jsoup.nodes.Document -> ew:
+    org.jsoup.nodes.Document$OutputSettings outputSettings -> f
+    org.jsoup.nodes.Document$QuirksMode quirksMode -> g
+    java.lang.String outerHtml() -> a_
+    java.lang.String nodeName() -> a
+    org.jsoup.nodes.Document clone() -> c
+    org.jsoup.nodes.Document$OutputSettings outputSettings() -> d
+    org.jsoup.nodes.Document$QuirksMode quirksMode() -> e
+    org.jsoup.nodes.Document quirksMode(org.jsoup.nodes.Document$QuirksMode) -> a
+    org.jsoup.nodes.Element clone() -> f
+    org.jsoup.nodes.Node clone() -> g
+    java.lang.Object clone() -> clone
+org.jsoup.nodes.Document$OutputSettings -> ex:
+    org.jsoup.nodes.Entities$EscapeMode escapeMode -> a
+    java.nio.charset.Charset charset -> b
+    java.nio.charset.CharsetEncoder charsetEncoder -> c
+    boolean prettyPrint -> d
+    int indentAmount -> e
+    org.jsoup.nodes.Entities$EscapeMode escapeMode() -> a
+    org.jsoup.nodes.Document$OutputSettings charset(java.nio.charset.Charset) -> a
+    org.jsoup.nodes.Document$OutputSettings charset(java.lang.String) -> a
+    java.nio.charset.CharsetEncoder encoder() -> b
+    boolean prettyPrint() -> c
+    int indentAmount() -> d
+    org.jsoup.nodes.Document$OutputSettings clone() -> e
+    java.lang.Object clone() -> clone
+org.jsoup.nodes.Document$QuirksMode -> ey:
+    org.jsoup.nodes.Document$QuirksMode noQuirks -> a
+    org.jsoup.nodes.Document$QuirksMode quirks -> b
+    org.jsoup.nodes.Document$QuirksMode limitedQuirks -> c
+    org.jsoup.nodes.Document$QuirksMode[] $VALUES -> d
+    org.jsoup.nodes.Document$QuirksMode[] values() -> values
+    org.jsoup.nodes.Document$QuirksMode valueOf(java.lang.String) -> valueOf
+org.jsoup.nodes.DocumentType -> ez:
+    java.lang.String nodeName() -> a
+    void outerHtmlHead(java.lang.StringBuilder,int,org.jsoup.nodes.Document$OutputSettings) -> a
+    void outerHtmlTail(java.lang.StringBuilder,int,org.jsoup.nodes.Document$OutputSettings) -> b
+org.jsoup.nodes.Element -> fa:
+    org.jsoup.parser.Tag tag -> f
+    java.util.Set classNames -> g
+    java.lang.String nodeName() -> a
+    java.lang.String tagName() -> h
+    org.jsoup.parser.Tag tag() -> i
+    boolean isBlock() -> j
+    org.jsoup.nodes.Element attr(java.lang.String,java.lang.String) -> a
+    org.jsoup.nodes.Element parent() -> k
+    org.jsoup.nodes.Element appendChild(org.jsoup.nodes.Node) -> a
+    org.jsoup.nodes.Element before(org.jsoup.nodes.Node) -> b
+    java.lang.String text() -> l
+    void text(java.lang.StringBuilder) -> b
+    void appendNormalisedText(java.lang.StringBuilder,org.jsoup.nodes.TextNode) -> a
+    void appendWhitespaceIfBr(org.jsoup.nodes.Element,java.lang.StringBuilder) -> a
+    boolean preserveWhitespace() -> m
+    java.lang.String className() -> n
+    java.util.Set classNames() -> o
+    void outerHtmlHead(java.lang.StringBuilder,int,org.jsoup.nodes.Document$OutputSettings) -> a
+    void outerHtmlTail(java.lang.StringBuilder,int,org.jsoup.nodes.Document$OutputSettings) -> b
+    java.lang.String html() -> p
+    void html(java.lang.StringBuilder) -> c
+    java.lang.String toString() -> toString
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    org.jsoup.nodes.Element clone() -> f
+    org.jsoup.nodes.Node clone() -> g
+    org.jsoup.nodes.Node before(org.jsoup.nodes.Node) -> c
+    org.jsoup.nodes.Node parent() -> q
+    org.jsoup.nodes.Node attr(java.lang.String,java.lang.String) -> b
+    java.lang.Object clone() -> clone
+org.jsoup.nodes.Entities -> fb:
+    java.util.Map full -> a
+    java.util.Map xhtmlByVal -> b
+    java.util.Map base -> c
+    java.util.Map baseByVal -> d
+    java.util.Map fullByVal -> e
+    java.util.regex.Pattern unescapePattern -> f
+    java.util.regex.Pattern strictUnescapePattern -> g
+    java.lang.Object[][] xhtmlArray -> h
+    boolean isNamedEntity(java.lang.String) -> a
+    boolean isBaseNamedEntity(java.lang.String) -> b
+    java.lang.Character getCharacterByName(java.lang.String) -> c
+    java.lang.String escape(java.lang.String,org.jsoup.nodes.Document$OutputSettings) -> a
+    java.lang.String escape(java.lang.String,java.nio.charset.CharsetEncoder,org.jsoup.nodes.Entities$EscapeMode) -> a
+    java.util.Map loadEntities(java.lang.String) -> d
+    java.util.Map toCharacterKey(java.util.Map) -> a
+    java.util.Map access$000() -> a
+    java.util.Map access$100() -> b
+    java.util.Map access$200() -> c
+org.jsoup.nodes.Entities$EscapeMode -> fc:
+    org.jsoup.nodes.Entities$EscapeMode xhtml -> a
+    org.jsoup.nodes.Entities$EscapeMode base -> b
+    org.jsoup.nodes.Entities$EscapeMode extended -> c
+    java.util.Map map -> d
+    org.jsoup.nodes.Entities$EscapeMode[] $VALUES -> e
+    org.jsoup.nodes.Entities$EscapeMode[] values() -> values
+    org.jsoup.nodes.Entities$EscapeMode valueOf(java.lang.String) -> valueOf
+    java.util.Map getMap() -> a
+org.jsoup.nodes.Node -> fd:
+    org.jsoup.nodes.Node parentNode -> a
+    java.util.List childNodes -> b
+    org.jsoup.nodes.Attributes attributes -> c
+    java.lang.String baseUri -> d
+    int siblingIndex -> e
+    java.lang.String nodeName() -> a
+    java.lang.String attr(java.lang.String) -> a
+    org.jsoup.nodes.Attributes attributes() -> r
+    org.jsoup.nodes.Node attr(java.lang.String,java.lang.String) -> b
+    boolean hasAttr(java.lang.String) -> b
+    void setBaseUri(java.lang.String) -> c
+    java.lang.String absUrl(java.lang.String) -> d
+    org.jsoup.nodes.Node childNode(int) -> a
+    java.util.List childNodes() -> s
+    org.jsoup.nodes.Node parent() -> q
+    org.jsoup.nodes.Document ownerDocument() -> t
+    void remove() -> u
+    org.jsoup.nodes.Node before(org.jsoup.nodes.Node) -> c
+    void setParentNode(org.jsoup.nodes.Node) -> d
+    void removeChild(org.jsoup.nodes.Node) -> e
+    void addChildren(org.jsoup.nodes.Node[]) -> a
+    void addChildren(int,org.jsoup.nodes.Node[]) -> a
+    void reparentChild(org.jsoup.nodes.Node) -> a
+    void reindexChildren() -> c
+    org.jsoup.nodes.Node nextSibling() -> v
+    int siblingIndex() -> w
+    void setSiblingIndex(int) -> b
+    org.jsoup.nodes.Node traverse(org.jsoup.select.NodeVisitor) -> a
+    java.lang.String outerHtml() -> a_
+    void outerHtml(java.lang.StringBuilder) -> a
+    org.jsoup.nodes.Document$OutputSettings getOutputSettings() -> d
+    void outerHtmlHead(java.lang.StringBuilder,int,org.jsoup.nodes.Document$OutputSettings) -> a
+    void outerHtmlTail(java.lang.StringBuilder,int,org.jsoup.nodes.Document$OutputSettings) -> b
+    java.lang.String toString() -> toString
+    void indent(java.lang.StringBuilder,int,org.jsoup.nodes.Document$OutputSettings) -> c
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    org.jsoup.nodes.Node clone() -> g
+    org.jsoup.nodes.Node doClone(org.jsoup.nodes.Node) -> f
+    java.lang.Object clone() -> clone
+org.jsoup.nodes.Node$1 -> fe:
+    java.lang.String val$baseUri -> a
+    org.jsoup.nodes.Node this$0 -> b
+    void head(org.jsoup.nodes.Node,int) -> a
+    void tail(org.jsoup.nodes.Node,int) -> b
+org.jsoup.nodes.Node$OuterHtmlVisitor -> ff:
+    java.lang.StringBuilder accum -> a
+    org.jsoup.nodes.Document$OutputSettings out -> b
+    void head(org.jsoup.nodes.Node,int) -> a
+    void tail(org.jsoup.nodes.Node,int) -> b
+org.jsoup.nodes.TextNode -> fg:
+    java.lang.String text -> f
+    java.lang.String nodeName() -> a
+    java.lang.String getWholeText() -> c
+    boolean isBlank() -> d
+    void outerHtmlHead(java.lang.StringBuilder,int,org.jsoup.nodes.Document$OutputSettings) -> a
+    void outerHtmlTail(java.lang.StringBuilder,int,org.jsoup.nodes.Document$OutputSettings) -> b
+    java.lang.String toString() -> toString
+    java.lang.String normaliseWhitespace(java.lang.String) -> e
+    java.lang.String stripLeadingWhitespace(java.lang.String) -> f
+    boolean lastCharIsWhitespace(java.lang.StringBuilder) -> b
+    void ensureAttributes() -> e
+    java.lang.String attr(java.lang.String) -> a
+    org.jsoup.nodes.Attributes attributes() -> r
+    org.jsoup.nodes.Node attr(java.lang.String,java.lang.String) -> b
+    boolean hasAttr(java.lang.String) -> b
+    java.lang.String absUrl(java.lang.String) -> d
+org.jsoup.parser.CharacterReader -> fh:
+    char[] input -> a
+    int length -> b
+    int pos -> c
+    int mark -> d
+    int pos() -> a
+    boolean isEmpty() -> b
+    char current() -> c
+    char consume() -> d
+    void unconsume() -> e
+    void advance() -> f
+    void mark() -> g
+    void rewindToMark() -> h
+    int nextIndexOf(char) -> a
+    int nextIndexOf(java.lang.CharSequence) -> a
+    java.lang.String consumeTo(char) -> b
+    java.lang.String consumeTo(java.lang.String) -> a
+    java.lang.String consumeToAny(char[]) -> a
+    java.lang.String consumeToEnd() -> i
+    java.lang.String consumeLetterSequence() -> j
+    java.lang.String consumeLetterThenDigitSequence() -> k
+    java.lang.String consumeHexSequence() -> l
+    java.lang.String consumeDigitSequence() -> m
+    boolean matches(char) -> c
+    boolean matches(java.lang.String) -> b
+    boolean matchesIgnoreCase(java.lang.String) -> c
+    boolean matchesAny(char[]) -> b
+    boolean matchesLetter() -> n
+    boolean matchesDigit() -> o
+    boolean matchConsume(java.lang.String) -> d
+    boolean matchConsumeIgnoreCase(java.lang.String) -> e
+    boolean containsIgnoreCase(java.lang.String) -> f
+    java.lang.String toString() -> toString
+org.jsoup.parser.HtmlTreeBuilder -> fi:
+    org.jsoup.parser.HtmlTreeBuilderState state -> i
+    org.jsoup.parser.HtmlTreeBuilderState originalState -> j
+    boolean baseUriSetFromDoc -> k
+    org.jsoup.nodes.Element headElement -> l
+    org.jsoup.nodes.Element formElement -> m
+    org.jsoup.nodes.Element contextElement -> n
+    org.jsoup.helper.DescendableLinkedList formattingElements -> o
+    java.util.List pendingTableCharacters -> p
+    boolean framesetOk -> q
+    boolean fosterInserts -> r
+    boolean fragmentParsing -> s
+    boolean $assertionsDisabled -> a
+    org.jsoup.nodes.Document parse(java.lang.String,java.lang.String,org.jsoup.parser.ParseErrorList) -> a
+    boolean process(org.jsoup.parser.Token) -> a
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilderState) -> a
+    void transition(org.jsoup.parser.HtmlTreeBuilderState) -> a
+    org.jsoup.parser.HtmlTreeBuilderState state() -> a
+    void markInsertionMode() -> b
+    org.jsoup.parser.HtmlTreeBuilderState originalState() -> c
+    void framesetOk(boolean) -> a
+    boolean framesetOk() -> d
+    org.jsoup.nodes.Document getDocument() -> e
+    java.lang.String getBaseUri() -> f
+    void maybeSetBaseUri(org.jsoup.nodes.Element) -> a
+    boolean isFragmentParsing() -> g
+    void error(org.jsoup.parser.HtmlTreeBuilderState) -> b
+    org.jsoup.nodes.Element insert(org.jsoup.parser.Token$StartTag) -> a
+    org.jsoup.nodes.Element insert(java.lang.String) -> a
+    void insert(org.jsoup.nodes.Element) -> b
+    org.jsoup.nodes.Element insertEmpty(org.jsoup.parser.Token$StartTag) -> b
+    void insert(org.jsoup.parser.Token$Comment) -> a
+    void insert(org.jsoup.parser.Token$Character) -> a
+    void insertNode(org.jsoup.nodes.Node) -> b
+    org.jsoup.nodes.Element pop() -> h
+    void push(org.jsoup.nodes.Element) -> c
+    org.jsoup.helper.DescendableLinkedList getStack() -> i
+    boolean onStack(org.jsoup.nodes.Element) -> d
+    boolean isElementInQueue(org.jsoup.helper.DescendableLinkedList,org.jsoup.nodes.Element) -> a
+    org.jsoup.nodes.Element getFromStack(java.lang.String) -> b
+    boolean removeFromStack(org.jsoup.nodes.Element) -> e
+    void popStackToClose(java.lang.String) -> c
+    void popStackToClose(java.lang.String[]) -> a
+    void popStackToBefore(java.lang.String) -> d
+    void clearStackToTableContext() -> j
+    void clearStackToTableBodyContext() -> k
+    void clearStackToTableRowContext() -> l
+    void clearStackToContext(java.lang.String[]) -> c
+    org.jsoup.nodes.Element aboveOnStack(org.jsoup.nodes.Element) -> f
+    void insertOnStackAfter(org.jsoup.nodes.Element,org.jsoup.nodes.Element) -> a
+    void replaceOnStack(org.jsoup.nodes.Element,org.jsoup.nodes.Element) -> b
+    void replaceInQueue(java.util.LinkedList,org.jsoup.nodes.Element,org.jsoup.nodes.Element) -> a
+    void resetInsertionMode() -> m
+    boolean inSpecificScope(java.lang.String,java.lang.String[],java.lang.String[]) -> a
+    boolean inSpecificScope(java.lang.String[],java.lang.String[],java.lang.String[]) -> a
+    boolean inScope(java.lang.String[]) -> b
+    boolean inScope(java.lang.String) -> e
+    boolean inScope(java.lang.String,java.lang.String[]) -> a
+    boolean inListItemScope(java.lang.String) -> f
+    boolean inButtonScope(java.lang.String) -> g
+    boolean inTableScope(java.lang.String) -> h
+    boolean inSelectScope(java.lang.String) -> i
+    void setHeadElement(org.jsoup.nodes.Element) -> g
+    org.jsoup.nodes.Element getHeadElement() -> n
+    boolean isFosterInserts() -> o
+    void setFosterInserts(boolean) -> b
+    org.jsoup.nodes.Element getFormElement() -> p
+    void setFormElement(org.jsoup.nodes.Element) -> h
+    void newPendingTableCharacters() -> q
+    java.util.List getPendingTableCharacters() -> r
+    void generateImpliedEndTags(java.lang.String) -> j
+    void generateImpliedEndTags() -> s
+    boolean isSpecial(org.jsoup.nodes.Element) -> i
+    void pushActiveFormattingElements(org.jsoup.nodes.Element) -> j
+    boolean isSameFormattingElement(org.jsoup.nodes.Element,org.jsoup.nodes.Element) -> d
+    void reconstructFormattingElements() -> t
+    void clearFormattingElementsToLastMarker() -> u
+    void removeFromActiveFormattingElements(org.jsoup.nodes.Element) -> k
+    boolean isInActiveFormattingElements(org.jsoup.nodes.Element) -> l
+    org.jsoup.nodes.Element getActiveFormattingElement(java.lang.String) -> k
+    void replaceActiveFormattingElement(org.jsoup.nodes.Element,org.jsoup.nodes.Element) -> c
+    void insertMarkerToFormattingElements() -> v
+    void insertInFosterParent(org.jsoup.nodes.Node) -> a
+    java.lang.String toString() -> toString
+org.jsoup.parser.HtmlTreeBuilderState -> fj:
+    org.jsoup.parser.HtmlTreeBuilderState Initial -> a
+    org.jsoup.parser.HtmlTreeBuilderState BeforeHtml -> b
+    org.jsoup.parser.HtmlTreeBuilderState BeforeHead -> c
+    org.jsoup.parser.HtmlTreeBuilderState InHead -> d
+    org.jsoup.parser.HtmlTreeBuilderState InHeadNoscript -> e
+    org.jsoup.parser.HtmlTreeBuilderState AfterHead -> f
+    org.jsoup.parser.HtmlTreeBuilderState InBody -> g
+    org.jsoup.parser.HtmlTreeBuilderState Text -> h
+    org.jsoup.parser.HtmlTreeBuilderState InTable -> i
+    org.jsoup.parser.HtmlTreeBuilderState InTableText -> j
+    org.jsoup.parser.HtmlTreeBuilderState InCaption -> k
+    org.jsoup.parser.HtmlTreeBuilderState InColumnGroup -> l
+    org.jsoup.parser.HtmlTreeBuilderState InTableBody -> m
+    org.jsoup.parser.HtmlTreeBuilderState InRow -> n
+    org.jsoup.parser.HtmlTreeBuilderState InCell -> o
+    org.jsoup.parser.HtmlTreeBuilderState InSelect -> p
+    org.jsoup.parser.HtmlTreeBuilderState InSelectInTable -> q
+    org.jsoup.parser.HtmlTreeBuilderState AfterBody -> r
+    org.jsoup.parser.HtmlTreeBuilderState InFrameset -> s
+    org.jsoup.parser.HtmlTreeBuilderState AfterFrameset -> t
+    org.jsoup.parser.HtmlTreeBuilderState AfterAfterBody -> u
+    org.jsoup.parser.HtmlTreeBuilderState AfterAfterFrameset -> v
+    org.jsoup.parser.HtmlTreeBuilderState ForeignContent -> w
+    java.lang.String nullString -> x
+    org.jsoup.parser.HtmlTreeBuilderState[] $VALUES -> y
+    org.jsoup.parser.HtmlTreeBuilderState[] values() -> values
+    org.jsoup.parser.HtmlTreeBuilderState valueOf(java.lang.String) -> valueOf
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+    boolean isWhitespace(org.jsoup.parser.Token) -> b
+    void handleRcData(org.jsoup.parser.Token$StartTag,org.jsoup.parser.HtmlTreeBuilder) -> c
+    void handleRawtext(org.jsoup.parser.Token$StartTag,org.jsoup.parser.HtmlTreeBuilder) -> d
+    boolean access$100(org.jsoup.parser.Token) -> a
+    void access$200(org.jsoup.parser.Token$StartTag,org.jsoup.parser.HtmlTreeBuilder) -> a
+    void access$300(org.jsoup.parser.Token$StartTag,org.jsoup.parser.HtmlTreeBuilder) -> b
+    java.lang.String access$400() -> a
+org.jsoup.parser.HtmlTreeBuilderState$1 -> fk:
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+org.jsoup.parser.HtmlTreeBuilderState$10 -> fl:
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+org.jsoup.parser.HtmlTreeBuilderState$11 -> fm:
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+org.jsoup.parser.HtmlTreeBuilderState$12 -> fn:
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+    boolean anythingElse(org.jsoup.parser.Token,org.jsoup.parser.TreeBuilder) -> a
+org.jsoup.parser.HtmlTreeBuilderState$13 -> fo:
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+    boolean exitTableBody(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> b
+    boolean anythingElse(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> c
+org.jsoup.parser.HtmlTreeBuilderState$14 -> fp:
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+    boolean anythingElse(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> b
+    boolean handleMissingTr(org.jsoup.parser.Token,org.jsoup.parser.TreeBuilder) -> a
+org.jsoup.parser.HtmlTreeBuilderState$15 -> fq:
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+    boolean anythingElse(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> b
+    void closeCell(org.jsoup.parser.HtmlTreeBuilder) -> a
+org.jsoup.parser.HtmlTreeBuilderState$16 -> fr:
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+    boolean anythingElse(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> b
+org.jsoup.parser.HtmlTreeBuilderState$17 -> fs:
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+org.jsoup.parser.HtmlTreeBuilderState$18 -> ft:
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+org.jsoup.parser.HtmlTreeBuilderState$19 -> fu:
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+org.jsoup.parser.HtmlTreeBuilderState$2 -> fv:
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+    boolean anythingElse(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> b
+org.jsoup.parser.HtmlTreeBuilderState$20 -> fw:
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+org.jsoup.parser.HtmlTreeBuilderState$21 -> fx:
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+org.jsoup.parser.HtmlTreeBuilderState$22 -> fy:
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+org.jsoup.parser.HtmlTreeBuilderState$23 -> fz:
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+org.jsoup.parser.HtmlTreeBuilderState$24 -> ga:
+    int[] $SwitchMap$org$jsoup$parser$Token$TokenType -> a
+org.jsoup.parser.HtmlTreeBuilderState$3 -> gb:
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+org.jsoup.parser.HtmlTreeBuilderState$4 -> gc:
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+    boolean anythingElse(org.jsoup.parser.Token,org.jsoup.parser.TreeBuilder) -> a
+org.jsoup.parser.HtmlTreeBuilderState$5 -> gd:
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+    boolean anythingElse(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> b
+org.jsoup.parser.HtmlTreeBuilderState$6 -> ge:
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+    boolean anythingElse(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> b
+org.jsoup.parser.HtmlTreeBuilderState$7 -> gf:
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+    boolean anyOtherEndTag(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> b
+org.jsoup.parser.HtmlTreeBuilderState$8 -> gg:
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+org.jsoup.parser.HtmlTreeBuilderState$9 -> gh:
+    boolean process(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> a
+    boolean anythingElse(org.jsoup.parser.Token,org.jsoup.parser.HtmlTreeBuilder) -> b
+org.jsoup.parser.ParseError -> gi:
+    int pos -> a
+    java.lang.String errorMsg -> b
+    java.lang.String toString() -> toString
+org.jsoup.parser.ParseErrorList -> gj:
+    int maxSize -> a
+    boolean canAddError() -> a
+    org.jsoup.parser.ParseErrorList noTracking() -> b
+org.jsoup.parser.Parser -> gk:
+    org.jsoup.nodes.Document parse(java.lang.String,java.lang.String) -> a
+org.jsoup.parser.Tag -> gl:
+    java.util.Map tags -> a
+    java.lang.String tagName -> b
+    boolean isBlock -> c
+    boolean formatAsBlock -> d
+    boolean canContainBlock -> e
+    boolean canContainInline -> f
+    boolean empty -> g
+    boolean selfClosing -> h
+    boolean preserveWhitespace -> i
+    java.lang.String[] blockTags -> j
+    java.lang.String[] inlineTags -> k
+    java.lang.String[] emptyTags -> l
+    java.lang.String[] formatAsInlineTags -> m
+    java.lang.String[] preserveWhitespaceTags -> n
+    java.lang.String getName() -> a
+    org.jsoup.parser.Tag valueOf(java.lang.String) -> a
+    boolean isBlock() -> b
+    boolean formatAsBlock() -> c
+    boolean isSelfClosing() -> d
+    boolean isKnownTag() -> e
+    boolean isKnownTag(java.lang.String) -> b
+    boolean preserveWhitespace() -> f
+    org.jsoup.parser.Tag setSelfClosing() -> g
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    void register(org.jsoup.parser.Tag) -> a
+org.jsoup.parser.Token -> gm:
+    org.jsoup.parser.Token$TokenType type -> a
+    java.lang.String tokenType() -> a
+    boolean isDoctype() -> b
+    org.jsoup.parser.Token$Doctype asDoctype() -> c
+    boolean isStartTag() -> d
+    org.jsoup.parser.Token$StartTag asStartTag() -> e
+    boolean isEndTag() -> f
+    org.jsoup.parser.Token$EndTag asEndTag() -> g
+    boolean isComment() -> h
+    org.jsoup.parser.Token$Comment asComment() -> i
+    boolean isCharacter() -> j
+    org.jsoup.parser.Token$Character asCharacter() -> k
+    boolean isEOF() -> l
+org.jsoup.parser.Token$1 -> gn:
+org.jsoup.parser.Token$Character -> go:
+    java.lang.String data -> b
+    java.lang.String getData() -> m
+    java.lang.String toString() -> toString
+org.jsoup.parser.Token$Comment -> gp:
+    java.lang.StringBuilder data -> b
+    java.lang.String getData() -> m
+    java.lang.String toString() -> toString
+org.jsoup.parser.Token$Doctype -> gq:
+    java.lang.StringBuilder name -> b
+    java.lang.StringBuilder publicIdentifier -> c
+    java.lang.StringBuilder systemIdentifier -> d
+    boolean forceQuirks -> e
+    java.lang.String getName() -> m
+    java.lang.String getPublicIdentifier() -> n
+    java.lang.String getSystemIdentifier() -> o
+    boolean isForceQuirks() -> p
+org.jsoup.parser.Token$EOF -> gr:
+org.jsoup.parser.Token$EndTag -> gs:
+    java.lang.String toString() -> toString
+org.jsoup.parser.Token$StartTag -> gt:
+    java.lang.String toString() -> toString
+org.jsoup.parser.Token$Tag -> gu:
+    java.lang.String tagName -> b
+    java.lang.String pendingAttributeName -> e
+    java.lang.StringBuilder pendingAttributeValue -> f
+    boolean selfClosing -> c
+    org.jsoup.nodes.Attributes attributes -> d
+    void newAttribute() -> m
+    void finaliseTag() -> n
+    java.lang.String name() -> o
+    org.jsoup.parser.Token$Tag name(java.lang.String) -> a
+    boolean isSelfClosing() -> p
+    org.jsoup.nodes.Attributes getAttributes() -> q
+    void appendTagName(java.lang.String) -> b
+    void appendTagName(char) -> a
+    void appendAttributeName(java.lang.String) -> c
+    void appendAttributeName(char) -> b
+    void appendAttributeValue(java.lang.String) -> d
+    void appendAttributeValue(char) -> c
+org.jsoup.parser.Token$TokenType -> gv:
+    org.jsoup.parser.Token$TokenType Doctype -> a
+    org.jsoup.parser.Token$TokenType StartTag -> b
+    org.jsoup.parser.Token$TokenType EndTag -> c
+    org.jsoup.parser.Token$TokenType Comment -> d
+    org.jsoup.parser.Token$TokenType Character -> e
+    org.jsoup.parser.Token$TokenType EOF -> f
+    org.jsoup.parser.Token$TokenType[] $VALUES -> g
+    org.jsoup.parser.Token$TokenType[] values() -> values
+    org.jsoup.parser.Token$TokenType valueOf(java.lang.String) -> valueOf
+org.jsoup.parser.Tokeniser -> gw:
+    org.jsoup.parser.CharacterReader reader -> e
+    org.jsoup.parser.ParseErrorList errors -> f
+    org.jsoup.parser.TokeniserState state -> g
+    org.jsoup.parser.Token emitPending -> h
+    boolean isEmitPending -> i
+    java.lang.StringBuilder charBuffer -> j
+    java.lang.StringBuilder dataBuffer -> a
+    org.jsoup.parser.Token$Tag tagPending -> b
+    org.jsoup.parser.Token$Doctype doctypePending -> c
+    org.jsoup.parser.Token$Comment commentPending -> d
+    org.jsoup.parser.Token$StartTag lastStartTag -> k
+    boolean selfClosingFlagAcknowledged -> l
+    org.jsoup.parser.Token read() -> a
+    void emit(org.jsoup.parser.Token) -> a
+    void emit(java.lang.String) -> a
+    void emit(char) -> a
+    void transition(org.jsoup.parser.TokeniserState) -> a
+    void advanceTransition(org.jsoup.parser.TokeniserState) -> b
+    void acknowledgeSelfClosingFlag() -> b
+    java.lang.Character consumeCharacterReference(java.lang.Character,boolean) -> a
+    org.jsoup.parser.Token$Tag createTagPending(boolean) -> a
+    void emitTagPending() -> c
+    void createCommentPending() -> d
+    void emitCommentPending() -> e
+    void createDoctypePending() -> f
+    void emitDoctypePending() -> g
+    void createTempBuffer() -> h
+    boolean isAppropriateEndTagToken() -> i
+    java.lang.String appropriateEndTagName() -> j
+    void error(org.jsoup.parser.TokeniserState) -> c
+    void eofError(org.jsoup.parser.TokeniserState) -> d
+    void characterReferenceError(java.lang.String) -> b
+    void error(java.lang.String) -> c
+org.jsoup.parser.TokeniserState -> gx:
+    org.jsoup.parser.TokeniserState Data -> a
+    org.jsoup.parser.TokeniserState CharacterReferenceInData -> b
+    org.jsoup.parser.TokeniserState Rcdata -> c
+    org.jsoup.parser.TokeniserState CharacterReferenceInRcdata -> d
+    org.jsoup.parser.TokeniserState Rawtext -> e
+    org.jsoup.parser.TokeniserState ScriptData -> f
+    org.jsoup.parser.TokeniserState PLAINTEXT -> g
+    org.jsoup.parser.TokeniserState TagOpen -> h
+    org.jsoup.parser.TokeniserState EndTagOpen -> i
+    org.jsoup.parser.TokeniserState TagName -> j
+    org.jsoup.parser.TokeniserState RcdataLessthanSign -> k
+    org.jsoup.parser.TokeniserState RCDATAEndTagOpen -> l
+    org.jsoup.parser.TokeniserState RCDATAEndTagName -> m
+    org.jsoup.parser.TokeniserState RawtextLessthanSign -> n
+    org.jsoup.parser.TokeniserState RawtextEndTagOpen -> o
+    org.jsoup.parser.TokeniserState RawtextEndTagName -> p
+    org.jsoup.parser.TokeniserState ScriptDataLessthanSign -> q
+    org.jsoup.parser.TokeniserState ScriptDataEndTagOpen -> r
+    org.jsoup.parser.TokeniserState ScriptDataEndTagName -> s
+    org.jsoup.parser.TokeniserState ScriptDataEscapeStart -> t
+    org.jsoup.parser.TokeniserState ScriptDataEscapeStartDash -> u
+    org.jsoup.parser.TokeniserState ScriptDataEscaped -> v
+    org.jsoup.parser.TokeniserState ScriptDataEscapedDash -> w
+    org.jsoup.parser.TokeniserState ScriptDataEscapedDashDash -> x
+    org.jsoup.parser.TokeniserState ScriptDataEscapedLessthanSign -> y
+    org.jsoup.parser.TokeniserState ScriptDataEscapedEndTagOpen -> z
+    org.jsoup.parser.TokeniserState ScriptDataEscapedEndTagName -> A
+    org.jsoup.parser.TokeniserState ScriptDataDoubleEscapeStart -> B
+    org.jsoup.parser.TokeniserState ScriptDataDoubleEscaped -> C
+    org.jsoup.parser.TokeniserState ScriptDataDoubleEscapedDash -> D
+    org.jsoup.parser.TokeniserState ScriptDataDoubleEscapedDashDash -> E
+    org.jsoup.parser.TokeniserState ScriptDataDoubleEscapedLessthanSign -> F
+    org.jsoup.parser.TokeniserState ScriptDataDoubleEscapeEnd -> G
+    org.jsoup.parser.TokeniserState BeforeAttributeName -> H
+    org.jsoup.parser.TokeniserState AttributeName -> I
+    org.jsoup.parser.TokeniserState AfterAttributeName -> J
+    org.jsoup.parser.TokeniserState BeforeAttributeValue -> K
+    org.jsoup.parser.TokeniserState AttributeValue_doubleQuoted -> L
+    org.jsoup.parser.TokeniserState AttributeValue_singleQuoted -> M
+    org.jsoup.parser.TokeniserState AttributeValue_unquoted -> N
+    org.jsoup.parser.TokeniserState AfterAttributeValue_quoted -> O
+    org.jsoup.parser.TokeniserState SelfClosingStartTag -> P
+    org.jsoup.parser.TokeniserState BogusComment -> Q
+    org.jsoup.parser.TokeniserState MarkupDeclarationOpen -> R
+    org.jsoup.parser.TokeniserState CommentStart -> S
+    org.jsoup.parser.TokeniserState CommentStartDash -> T
+    org.jsoup.parser.TokeniserState Comment -> U
+    org.jsoup.parser.TokeniserState CommentEndDash -> V
+    org.jsoup.parser.TokeniserState CommentEnd -> W
+    org.jsoup.parser.TokeniserState CommentEndBang -> X
+    org.jsoup.parser.TokeniserState Doctype -> Y
+    org.jsoup.parser.TokeniserState BeforeDoctypeName -> Z
+    org.jsoup.parser.TokeniserState DoctypeName -> aa
+    org.jsoup.parser.TokeniserState AfterDoctypeName -> ab
+    org.jsoup.parser.TokeniserState AfterDoctypePublicKeyword -> ac
+    org.jsoup.parser.TokeniserState BeforeDoctypePublicIdentifier -> ad
+    org.jsoup.parser.TokeniserState DoctypePublicIdentifier_doubleQuoted -> ae
+    org.jsoup.parser.TokeniserState DoctypePublicIdentifier_singleQuoted -> af
+    org.jsoup.parser.TokeniserState AfterDoctypePublicIdentifier -> ag
+    org.jsoup.parser.TokeniserState BetweenDoctypePublicAndSystemIdentifiers -> ah
+    org.jsoup.parser.TokeniserState AfterDoctypeSystemKeyword -> ai
+    org.jsoup.parser.TokeniserState BeforeDoctypeSystemIdentifier -> aj
+    org.jsoup.parser.TokeniserState DoctypeSystemIdentifier_doubleQuoted -> ak
+    org.jsoup.parser.TokeniserState DoctypeSystemIdentifier_singleQuoted -> al
+    org.jsoup.parser.TokeniserState AfterDoctypeSystemIdentifier -> am
+    org.jsoup.parser.TokeniserState BogusDoctype -> an
+    org.jsoup.parser.TokeniserState CdataSection -> ao
+    java.lang.String replacementStr -> ap
+    org.jsoup.parser.TokeniserState[] $VALUES -> aq
+    org.jsoup.parser.TokeniserState[] values() -> values
+    org.jsoup.parser.TokeniserState valueOf(java.lang.String) -> valueOf
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+    java.lang.String access$100() -> a
+org.jsoup.parser.TokeniserState$1 -> gy:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$10 -> gz:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$11 -> ha:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$12 -> hb:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$13 -> hc:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+    void anythingElse(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> b
+org.jsoup.parser.TokeniserState$14 -> hd:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$15 -> he:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$16 -> hf:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+    void anythingElse(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> b
+org.jsoup.parser.TokeniserState$17 -> hg:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$18 -> hh:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$19 -> hi:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+    void anythingElse(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> b
+org.jsoup.parser.TokeniserState$2 -> hj:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$20 -> hk:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$21 -> hl:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$22 -> hm:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$23 -> hn:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$24 -> ho:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$25 -> hp:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$26 -> hq:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$27 -> hr:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+    void anythingElse(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> b
+org.jsoup.parser.TokeniserState$28 -> hs:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$29 -> ht:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$3 -> hu:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$30 -> hv:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$31 -> hw:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$32 -> hx:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$33 -> hy:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$34 -> hz:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$35 -> ia:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$36 -> ib:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$37 -> ic:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$38 -> id:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$39 -> ie:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$4 -> if:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$40 -> ig:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$41 -> ih:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$42 -> ii:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$43 -> ij:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$44 -> ik:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$45 -> il:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$46 -> im:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$47 -> in:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$48 -> io:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$49 -> ip:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$5 -> iq:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$50 -> ir:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$51 -> is:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$52 -> it:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$53 -> iu:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$54 -> iv:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$55 -> iw:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$56 -> ix:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$57 -> iy:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$58 -> iz:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$59 -> ja:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$6 -> jb:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$60 -> jc:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$61 -> jd:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$62 -> je:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$63 -> jf:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$64 -> jg:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$65 -> jh:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$66 -> ji:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$67 -> jj:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$7 -> jk:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$8 -> jl:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TokeniserState$9 -> jm:
+    void read(org.jsoup.parser.Tokeniser,org.jsoup.parser.CharacterReader) -> a
+org.jsoup.parser.TreeBuilder -> jn:
+    org.jsoup.parser.CharacterReader reader -> b
+    org.jsoup.parser.Tokeniser tokeniser -> c
+    org.jsoup.nodes.Document doc -> d
+    org.jsoup.helper.DescendableLinkedList stack -> e
+    java.lang.String baseUri -> f
+    org.jsoup.parser.Token currentToken -> g
+    org.jsoup.parser.ParseErrorList errors -> h
+    void initialiseParse(java.lang.String,java.lang.String,org.jsoup.parser.ParseErrorList) -> b
+    org.jsoup.nodes.Document parse(java.lang.String,java.lang.String,org.jsoup.parser.ParseErrorList) -> a
+    void runParser() -> w
+    boolean process(org.jsoup.parser.Token) -> a
+    org.jsoup.nodes.Element currentElement() -> x
+org.jsoup.select.NodeTraversor -> jo:
+    org.jsoup.select.NodeVisitor visitor -> a
+    void traverse(org.jsoup.nodes.Node) -> a
+org.jsoup.select.NodeVisitor -> jp:
+    void head(org.jsoup.nodes.Node,int) -> a
+    void tail(org.jsoup.nodes.Node,int) -> b
+org.openqa.selenium.Cookie -> jq:
+    java.lang.String name -> a
+    java.lang.String value -> b
+    java.lang.String path -> c
+    java.lang.String domain -> d
+    java.util.Date expiry -> e
+    void validate() -> a
+    java.lang.String toString() -> toString
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+org.ryangray.postdorig.AuthRequestTokenAsync -> jr:
+    twitter4j.auth.RequestToken doInBackground(java.lang.String[]) -> a
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+org.ryangray.postdorig.FBAuthListener -> js:
+org.ryangray.postdorig.FBBaseDialogListener -> jt:
+    void onFacebookError(com.facebook.android.FacebookError) -> a
+    void onError(com.facebook.android.DialogError) -> a
+    void onCancel() -> a
+org.ryangray.postdorig.FBDialogListener -> ju:
+    void onComplete(android.os.Bundle) -> a
+org.ryangray.postdorig.FBSessionEvents -> jv:
+    java.util.LinkedList mAuthListeners -> a
+    java.util.LinkedList mLogoutListeners -> b
+    void addAuthListener(org.ryangray.postdorig.FBSessionEvents$AuthListener) -> a
+org.ryangray.postdorig.FBSessionEvents$AuthListener -> jw:
+org.ryangray.postdorig.FBSessionStore -> jx:
+    boolean save(com.facebook.android.Facebook,android.content.Context) -> a
+    boolean restore(com.facebook.android.Facebook,android.content.Context) -> b
+org.ryangray.postdorig.GetFeedAsync -> jy:
+    android.app.Activity activity -> a
+    android.os.Bundle b -> b
+    android.app.Activity doInBackground(java.lang.Object[]) -> a
+    java.lang.String getData(java.lang.String[],org.w3c.dom.Node,org.ryangray.postdorig.Source,java.lang.String,java.lang.String) -> a
+    void onProgressUpdate(java.lang.Integer[]) -> a
+    void onPostExecute(android.app.Activity) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+    void onProgressUpdate(java.lang.Object[]) -> onProgressUpdate
+org.ryangray.postdorig.GetHeadlines -> org.ryangray.postdorig.GetHeadlines:
+    java.lang.String tag -> a
+    org.w3c.dom.Node feed -> b
+    org.w3c.dom.Node getHeadline(java.lang.String,android.content.Context) -> a
+    org.w3c.dom.Node getFeed(java.lang.String,android.content.Context) -> b
+org.ryangray.postdorig.MainActivity -> org.ryangray.postdorig.MainActivity:
+    int activities -> a
+    java.util.ArrayList allSources -> b
+    android.widget.ImageView loadingPngIV -> d
+    android.widget.TextView progressTextView -> c
+    android.graphics.drawable.AnimationDrawable loadingPng -> e
+    int visible -> f
+    int gone -> g
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void onStop() -> onStop
+    android.widget.ImageView access$0(org.ryangray.postdorig.MainActivity) -> a
+    android.graphics.drawable.AnimationDrawable access$1(org.ryangray.postdorig.MainActivity) -> b
+org.ryangray.postdorig.MainActivity$1 -> jz:
+    org.ryangray.postdorig.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.ryangray.postdorig.MainActivity$2 -> ka:
+    org.ryangray.postdorig.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.ryangray.postdorig.NewsActivity -> org.ryangray.postdorig.NewsActivity:
+    android.widget.ImageView loadingPngIV -> e
+    android.graphics.drawable.AnimationDrawable loadingPng -> f
+    int visible -> g
+    int gone -> h
+    com.facebook.android.Facebook facebook -> i
+    com.facebook.android.AsyncFacebookRunner asyncRunner -> j
+    java.lang.String twitterArticleURL -> a
+    android.content.SharedPreferences twitterPrefs -> b
+    twitter4j.Twitter twitter -> c
+    twitter4j.auth.RequestToken twitterReqToken -> d
+    void onCreate(android.os.Bundle) -> onCreate
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void onBackPressed() -> onBackPressed
+    void access$0(org.ryangray.postdorig.NewsActivity,com.facebook.android.Facebook) -> a
+    com.facebook.android.Facebook access$1(org.ryangray.postdorig.NewsActivity) -> a
+    void access$2(org.ryangray.postdorig.NewsActivity,com.facebook.android.AsyncFacebookRunner) -> a
+org.ryangray.postdorig.NewsActivity$MyAdapter -> kb:
+    org.ryangray.postdorig.NewsActivity this$0 -> a
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+    org.ryangray.postdorig.NewsActivity access$0(org.ryangray.postdorig.NewsActivity$MyAdapter) -> a
+org.ryangray.postdorig.NewsActivity$MyAdapter$OnItemClickListener -> kc:
+    int mPosition -> b
+    java.lang.String[] mUrls -> c
+    android.widget.LinearLayout mContentContainer -> d
+    android.widget.TextView mHeadlineTextView -> e
+    org.ryangray.postdorig.NewsActivity$MyAdapter this$1 -> a
+    void onClick(android.view.View) -> onClick
+    void expireTwitterCookie() -> a
+    void loginNewUser() -> b
+    void loginAuthorisedUser() -> c
+    java.lang.String[] access$0(org.ryangray.postdorig.NewsActivity$MyAdapter$OnItemClickListener) -> a
+    int access$1(org.ryangray.postdorig.NewsActivity$MyAdapter$OnItemClickListener) -> b
+    org.ryangray.postdorig.NewsActivity$MyAdapter access$2(org.ryangray.postdorig.NewsActivity$MyAdapter$OnItemClickListener) -> c
+org.ryangray.postdorig.NewsActivity$MyAdapter$OnItemClickListener$1 -> kd:
+    org.ryangray.postdorig.NewsActivity$MyAdapter$OnItemClickListener this$2 -> a
+    void onComplete(android.os.Bundle) -> a
+    void onFacebookError(com.facebook.android.FacebookError) -> a
+    void onError(com.facebook.android.DialogError) -> a
+    void onCancel() -> a
+org.ryangray.postdorig.SelectSources -> org.ryangray.postdorig.SelectSources:
+    android.widget.ImageView loadingPngIV -> a
+    android.widget.TextView loadingTV -> b
+    android.graphics.drawable.AnimationDrawable loadingPng -> c
+    int visible -> d
+    int gone -> e
+    void onCreate(android.os.Bundle) -> onCreate
+    void onClick(android.view.View) -> onClick
+    void goToNews() -> a
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void onResume() -> onResume
+org.ryangray.postdorig.Source -> org.ryangray.postdorig.Source:
+    java.lang.String name -> a
+    java.lang.String url -> b
+    int imgId -> c
+    int checkBoxInt -> d
+    java.lang.Boolean checked -> e
+    java.lang.String getName() -> a
+    java.lang.String getUrl() -> b
+    int getImgId() -> c
+    int getCheckBoxInt() -> d
+    java.lang.Boolean getChecked() -> e
+    void createSources(android.content.SharedPreferences,android.content.Context) -> a
+    void createSources(android.content.Context) -> a
+org.ryangray.postdorig.TwitterAuthNewUserAsync -> ke:
+    twitter4j.auth.AccessToken doInBackground(java.lang.Object[]) -> a
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+org.ryangray.postdorig.TwitterFrag -> org.ryangray.postdorig.TwitterFrag:
+    java.lang.Object lock -> m
+    void onCreate(android.os.Bundle) -> onCreate
+org.ryangray.postdorig.TwitterFrag$FragAsync -> kf:
+    org.ryangray.postdorig.TwitterFrag this$0 -> a
+    java.lang.Integer doInBackground(java.lang.Object[]) -> a
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+org.ryangray.postdorig.TwitterFragment -> kg:
+    android.widget.EditText tweetText -> W
+    android.widget.TextView charCount -> X
+    void onCreate(android.os.Bundle) -> a
+    android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> a
+org.ryangray.postdorig.TwitterFragment$1 -> kh:
+    org.ryangray.postdorig.TwitterFragment this$0 -> a
+    void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    void afterTextChanged(android.text.Editable) -> afterTextChanged
+org.ryangray.postdorig.TwitterFragment$2 -> ki:
+    org.ryangray.postdorig.TwitterFragment this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.ryangray.postdorig.TwitterFragment$3 -> kj:
+    org.ryangray.postdorig.TwitterFragment this$0 -> a
+    void onClick(android.view.View) -> onClick
+org.ryangray.postdorig.TwitterTweet -> kk:
+    java.lang.String doInBackground(java.lang.String[]) -> a
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+org.ryangray.postdorig.TwitterURLShortenerAsync -> kl:
+    java.lang.String doInBackground(java.lang.String[]) -> a
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+org.ryangray.postdorig.TwitterWebView -> org.ryangray.postdorig.TwitterWebView:
+    android.webkit.WebView twitterSite -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    void onNewIntent(android.content.Intent) -> onNewIntent
+    void dealWithTwitterResponse(android.content.Intent) -> a
+    void authoriseNewUser(java.lang.String) -> a
+    void saveAccessToken(twitter4j.auth.AccessToken) -> a
+twitter4j.AccountTotals -> km:
+twitter4j.AccountTotalsJSONImpl -> kn:
+    int updates -> a
+    int followers -> b
+    int favorites -> c
+    int friends -> d
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+twitter4j.Annotation -> ko:
+    java.lang.String type -> a
+    java.util.Map attributes -> b
+    java.lang.String getType() -> a
+    void setType(java.lang.String) -> a
+    java.util.Map getAttributes() -> b
+    void setAttributes(java.util.Map) -> a
+    java.lang.Integer size() -> c
+    int compareTo(twitter4j.Annotation) -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    java.util.SortedSet sortedNames() -> d
+    int compareTo(java.lang.Object) -> compareTo
+twitter4j.Annotations -> kp:
+    java.util.List annotations -> a
+    void setAnnotations(java.util.List) -> a
+    void addAnnotation(twitter4j.Annotation) -> a
+    java.lang.Integer size() -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    java.util.List getSortedAnnotations() -> b
+twitter4j.CategoryJSONImpl -> kq:
+    java.lang.String name -> a
+    java.lang.String slug -> b
+    int size -> c
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+twitter4j.DirectMessage -> kr:
+    long getId() -> a
+twitter4j.DirectMessageJSONImpl -> ks:
+    long id -> a
+    java.lang.String text -> b
+    long senderId -> c
+    long recipientId -> d
+    java.util.Date createdAt -> e
+    java.lang.String senderScreenName -> f
+    java.lang.String recipientScreenName -> g
+    twitter4j.User sender -> h
+    twitter4j.User recipient -> i
+    long getId() -> a
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+    java.lang.String toString() -> toString
+twitter4j.ExceptionDiagnosis -> kt:
+    int stackLineHash -> a
+    int lineNumberHash -> b
+    java.lang.String hexString -> c
+    java.lang.Throwable th -> d
+    java.lang.String getStackLineHashAsHex() -> a
+    java.lang.String getLineNumberHashAsHex() -> b
+    java.lang.String asHexString() -> c
+    java.lang.String toHexString(int) -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+twitter4j.GeoLocation -> ku:
+    double latitude -> a
+    double longitude -> b
+    twitter4j.GeoLocation getInstance(org.json.JSONObject) -> a
+    twitter4j.GeoLocation[][] coordinatesAsGeoLocationArray(org.json.JSONArray) -> a
+    double getLatitude() -> a
+    double getLongitude() -> b
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+twitter4j.HashtagEntity -> kv:
+twitter4j.HashtagEntityJSONImpl -> kw:
+    int start -> a
+    int end -> b
+    java.lang.String text -> c
+    void init(org.json.JSONObject) -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+twitter4j.IDs -> kx:
+    long[] getIDs() -> a
+twitter4j.IDsJSONImpl -> ky:
+    long[] ids -> a
+    long previousCursor -> b
+    long nextCursor -> c
+    long[] getIDs() -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+twitter4j.Location -> kz:
+twitter4j.LocationJSONImpl -> la:
+    int woeid -> a
+    java.lang.String countryName -> b
+    java.lang.String countryCode -> c
+    java.lang.String placeName -> d
+    int placeCode -> e
+    java.lang.String name -> f
+    java.lang.String url -> g
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+twitter4j.MediaEntity -> lb:
+twitter4j.MediaEntity$Size -> lc:
+    java.lang.Integer THUMB -> a
+    java.lang.Integer SMALL -> b
+    java.lang.Integer MEDIUM -> c
+    java.lang.Integer LARGE -> d
+twitter4j.MediaEntityJSONImpl -> ld:
+    long id -> a
+    int start -> b
+    int end -> c
+    java.net.URL url -> d
+    java.net.URL mediaURL -> e
+    java.net.URL mediaURLHttps -> f
+    java.net.URL expandedURL -> g
+    java.lang.String displayURL -> h
+    java.util.Map sizes -> i
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+twitter4j.MediaEntityJSONImpl$Size -> le:
+    int width -> e
+    int height -> f
+    int resize -> g
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+twitter4j.Place -> lf:
+    java.lang.String getId() -> a
+twitter4j.PlaceJSONImpl -> lg:
+    java.lang.String name -> a
+    java.lang.String streetAddress -> b
+    java.lang.String countryCode -> c
+    java.lang.String id -> d
+    java.lang.String country -> e
+    java.lang.String placeType -> f
+    java.lang.String url -> g
+    java.lang.String fullName -> h
+    java.lang.String boundingBoxType -> i
+    twitter4j.GeoLocation[][] boundingBoxCoordinates -> j
+    java.lang.String geometryType -> k
+    twitter4j.GeoLocation[][] geometryCoordinates -> l
+    twitter4j.Place[] containedWithIn -> m
+    void init(org.json.JSONObject) -> a
+    int compareTo(twitter4j.Place) -> a
+    java.lang.String getId() -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    int compareTo(java.lang.Object) -> compareTo
+twitter4j.RateLimitStatus -> lh:
+    int getSecondsUntilReset() -> a
+twitter4j.RateLimitStatusEvent -> li:
+    twitter4j.RateLimitStatus rateLimitStatus -> a
+    boolean isAccountRateLimitStatus -> b
+twitter4j.RateLimitStatusJSONImpl -> lj:
+    int remainingHits -> a
+    int hourlyLimit -> b
+    int resetTimeInSeconds -> c
+    int secondsUntilReset -> d
+    java.util.Date resetTime -> e
+    twitter4j.RateLimitStatus createFromResponseHeader(twitter4j.internal.http.HttpResponse) -> a
+    twitter4j.RateLimitStatus createFeatureSpecificRateLimitStatusFromResponseHeader(twitter4j.internal.http.HttpResponse) -> b
+    int getSecondsUntilReset() -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+twitter4j.RateLimitStatusListener -> lk:
+    void onRateLimitStatus(twitter4j.RateLimitStatusEvent) -> a
+    void onRateLimitReached(twitter4j.RateLimitStatusEvent) -> b
+twitter4j.RelatedResults -> ll:
+twitter4j.RelatedResultsJSONImpl -> lm:
+    java.util.Map tweetsMap -> a
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+    java.lang.String toString() -> toString
+twitter4j.Relationship -> ln:
+    long getSourceUserId() -> a
+    long getTargetUserId() -> b
+    java.lang.String getSourceUserScreenName() -> c
+    java.lang.String getTargetUserScreenName() -> d
+twitter4j.RelationshipJSONImpl -> lo:
+    long targetUserId -> a
+    java.lang.String targetUserScreenName -> b
+    boolean sourceBlockingTarget -> c
+    boolean sourceNotificationsEnabled -> d
+    boolean sourceFollowingTarget -> e
+    boolean sourceFollowedByTarget -> f
+    long sourceUserId -> g
+    java.lang.String sourceUserScreenName -> h
+    long getSourceUserId() -> a
+    long getTargetUserId() -> b
+    java.lang.String getSourceUserScreenName() -> c
+    java.lang.String getTargetUserScreenName() -> d
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+twitter4j.SavedSearch -> lp:
+    int getId() -> a
+twitter4j.SavedSearchJSONImpl -> lq:
+    java.util.Date createdAt -> a
+    java.lang.String query -> b
+    int position -> c
+    java.lang.String name -> d
+    int id -> e
+    int compareTo(twitter4j.SavedSearch) -> a
+    int getId() -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    int compareTo(java.lang.Object) -> compareTo
+twitter4j.Status -> lr:
+    long getId() -> a
+twitter4j.StatusDeletionNotice -> ls:
+    long getStatusId() -> a
+twitter4j.StatusDeletionNoticeImpl -> lt:
+    long statusId -> a
+    long userId -> b
+    long getStatusId() -> a
+    int compareTo(twitter4j.StatusDeletionNotice) -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    int compareTo(java.lang.Object) -> compareTo
+twitter4j.StatusJSONImpl -> lu:
+    twitter4j.internal.logging.Logger logger -> b
+    java.util.Date createdAt -> c
+    long id -> d
+    java.lang.String text -> e
+    java.lang.String source -> f
+    boolean isTruncated -> g
+    long inReplyToStatusId -> h
+    long inReplyToUserId -> i
+    boolean isFavorited -> j
+    java.lang.String inReplyToScreenName -> k
+    twitter4j.GeoLocation geoLocation -> l
+    twitter4j.Place place -> m
+    long retweetCount -> n
+    boolean wasRetweetedByMe -> o
+    java.lang.String[] contributors -> p
+    long[] contributorsIDs -> q
+    twitter4j.Annotations annotations -> r
+    twitter4j.Status retweetedStatus -> s
+    twitter4j.UserMentionEntity[] userMentionEntities -> t
+    twitter4j.URLEntity[] urlEntities -> u
+    twitter4j.HashtagEntity[] hashtagEntities -> v
+    twitter4j.MediaEntity[] mediaEntities -> w
+    twitter4j.User user -> x
+    java.lang.Class class$twitter4j$StatusJSONImpl -> a
+    void init(org.json.JSONObject) -> a
+    int compareTo(twitter4j.Status) -> a
+    long getId() -> a
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+    java.lang.String toString() -> toString
+    int compareTo(java.lang.Object) -> compareTo
+    java.lang.Class class$(java.lang.String) -> a
+twitter4j.Trend -> lv:
+    java.lang.String getName() -> a
+    java.lang.String getUrl() -> b
+    java.lang.String getQuery() -> c
+twitter4j.TrendJSONImpl -> lw:
+    java.lang.String name -> a
+    java.lang.String url -> b
+    java.lang.String query -> c
+    java.lang.String getName() -> a
+    java.lang.String getUrl() -> b
+    java.lang.String getQuery() -> c
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+twitter4j.Trends -> lx:
+    twitter4j.Trend[] getTrends() -> a
+    java.util.Date getAsOf() -> b
+    java.util.Date getTrendAt() -> c
+twitter4j.TrendsJSONImpl -> ly:
+    java.util.Date asOf -> a
+    java.util.Date trendAt -> b
+    twitter4j.Trend[] trends -> c
+    int compareTo(twitter4j.Trends) -> a
+    twitter4j.Trend[] getTrends() -> a
+    java.util.Date getAsOf() -> b
+    java.util.Date getTrendAt() -> c
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    int compareTo(java.lang.Object) -> compareTo
+twitter4j.Tweet -> lz:
+    long getId() -> a
+twitter4j.TweetJSONImpl -> ma:
+    java.lang.String text -> a
+    long toUserId -> b
+    java.lang.String toUser -> c
+    java.lang.String fromUser -> d
+    long id -> e
+    long fromUserId -> f
+    java.lang.String isoLanguageCode -> g
+    java.lang.String source -> h
+    java.lang.String profileImageUrl -> i
+    java.util.Date createdAt -> j
+    java.lang.String location -> k
+    twitter4j.Place place -> l
+    twitter4j.GeoLocation geoLocation -> m
+    twitter4j.Annotations annotations -> n
+    int compareTo(twitter4j.Tweet) -> a
+    long getId() -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    int compareTo(java.lang.Object) -> compareTo
+twitter4j.Twitter -> mb:
+twitter4j.TwitterAPIMonitor -> mc:
+    twitter4j.internal.logging.Logger logger -> b
+    java.util.regex.Pattern pattern -> c
+    twitter4j.TwitterAPIMonitor SINGLETON -> d
+    twitter4j.management.APIStatistics STATISTICS -> e
+    java.lang.Class class$twitter4j$TwitterAPIMonitor -> a
+    twitter4j.TwitterAPIMonitor getInstance() -> a
+    void methodCalled(java.lang.String,long,boolean) -> a
+    java.lang.Class class$(java.lang.String) -> a
+twitter4j.TwitterBase -> md:
+    twitter4j.auth.Authorization getAuthorization() -> a
+    void shutdown() -> b
+twitter4j.TwitterBaseImpl -> me:
+    twitter4j.conf.Configuration conf -> a
+    java.lang.String screenName -> b
+    long id -> c
+    twitter4j.internal.http.HttpClientWrapper http -> d
+    java.util.List rateLimitStatusListeners -> f
+    twitter4j.auth.Authorization auth -> e
+    void init() -> e
+    void httpResponseReceived(twitter4j.internal.http.HttpResponseEvent) -> a
+    twitter4j.auth.Authorization getAuthorization() -> a
+    void shutdown() -> b
+    void ensureAuthorizationEnabled() -> c
+    void setOAuthConsumer(java.lang.String,java.lang.String) -> a
+    twitter4j.auth.RequestToken getOAuthRequestToken(java.lang.String) -> a
+    twitter4j.auth.AccessToken getOAuthAccessToken() -> d
+    twitter4j.auth.AccessToken getOAuthAccessToken(twitter4j.auth.RequestToken,java.lang.String) -> a
+    void setOAuthAccessToken(twitter4j.auth.AccessToken) -> a
+    twitter4j.auth.OAuthSupport getOAuth() -> f
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+twitter4j.TwitterException -> mf:
+    int statusCode -> b
+    twitter4j.ExceptionDiagnosis exceptionDiagnosis -> c
+    twitter4j.internal.http.HttpResponse response -> d
+    java.lang.String errorMessage -> e
+    java.lang.String requestPath -> f
+    java.lang.String[] FILTER -> g
+    boolean nested -> a
+    java.lang.String getMessage() -> getMessage
+    void decode(java.lang.String) -> a
+    int getStatusCode() -> a
+    twitter4j.RateLimitStatus getRateLimitStatus() -> b
+    twitter4j.RateLimitStatus getFeatureSpecificRateLimitStatus() -> c
+    int getRetryAfter() -> d
+    java.lang.String getExceptionCode() -> e
+    twitter4j.ExceptionDiagnosis getExceptionDiagnosis() -> g
+    void setNested() -> f
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    java.lang.String getCause(twitter4j.internal.http.HttpResponse) -> a
+twitter4j.TwitterFactory -> mg:
+    twitter4j.conf.Configuration conf -> a
+    twitter4j.Twitter getInstance() -> a
+twitter4j.TwitterImpl -> mh:
+    twitter4j.internal.http.HttpParameter INCLUDE_ENTITIES -> f
+    twitter4j.internal.http.HttpParameter INCLUDE_RTS -> g
+    twitter4j.Status updateStatus(java.lang.String) -> b
+    boolean equals(java.lang.Object) -> equals
+    twitter4j.internal.http.HttpResponse post(java.lang.String,twitter4j.internal.http.HttpParameter[]) -> a
+    boolean isOk(twitter4j.internal.http.HttpResponse) -> a
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+twitter4j.TwitterResponse -> mi:
+twitter4j.TwitterResponseImpl -> mj:
+    twitter4j.RateLimitStatus rateLimitStatus -> a
+    int accessLevel -> b
+    int toAccessLevel(twitter4j.internal.http.HttpResponse) -> a
+twitter4j.URLEntity -> mk:
+twitter4j.URLEntityJSONImpl -> ml:
+    int start -> a
+    int end -> b
+    java.net.URL url -> c
+    java.net.URL expandedURL -> d
+    java.lang.String displayURL -> e
+    void init(org.json.JSONObject) -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+twitter4j.User -> mm:
+    long getId() -> a
+twitter4j.UserJSONImpl -> mn:
+    long id -> a
+    java.lang.String name -> b
+    java.lang.String screenName -> c
+    java.lang.String location -> d
+    java.lang.String description -> e
+    boolean isContributorsEnabled -> f
+    java.lang.String profileImageUrl -> g
+    java.lang.String profileImageUrlHttps -> h
+    java.lang.String url -> i
+    boolean isProtected -> j
+    int followersCount -> k
+    twitter4j.Status status -> l
+    java.lang.String profileBackgroundColor -> m
+    java.lang.String profileTextColor -> n
+    java.lang.String profileLinkColor -> o
+    java.lang.String profileSidebarFillColor -> p
+    java.lang.String profileSidebarBorderColor -> q
+    boolean profileUseBackgroundImage -> r
+    boolean showAllInlineMedia -> s
+    int friendsCount -> t
+    java.util.Date createdAt -> u
+    int favouritesCount -> v
+    int utcOffset -> w
+    java.lang.String timeZone -> x
+    java.lang.String profileBackgroundImageUrl -> y
+    java.lang.String profileBackgroundImageUrlHttps -> z
+    boolean profileBackgroundTiled -> A
+    java.lang.String lang -> B
+    int statusesCount -> C
+    boolean isGeoEnabled -> D
+    boolean isVerified -> E
+    boolean translator -> F
+    int listedCount -> G
+    boolean isFollowRequestSent -> H
+    void init(org.json.JSONObject) -> a
+    int compareTo(twitter4j.User) -> a
+    long getId() -> a
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+    java.lang.String toString() -> toString
+    int compareTo(java.lang.Object) -> compareTo
+twitter4j.UserList -> mo:
+    int getId() -> a
+twitter4j.UserListJSONImpl -> mp:
+    int id -> a
+    java.lang.String name -> b
+    java.lang.String fullName -> c
+    java.lang.String slug -> d
+    java.lang.String description -> e
+    int subscriberCount -> f
+    int memberCount -> g
+    java.lang.String uri -> h
+    boolean mode -> i
+    twitter4j.User user -> j
+    boolean following -> k
+    int compareTo(twitter4j.UserList) -> a
+    int getId() -> a
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+    java.lang.String toString() -> toString
+    int compareTo(java.lang.Object) -> compareTo
+twitter4j.UserMentionEntity -> mq:
+twitter4j.UserMentionEntityJSONImpl -> mr:
+    int start -> a
+    int end -> b
+    java.lang.String name -> c
+    java.lang.String screenName -> d
+    long id -> e
+    void init(org.json.JSONObject) -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+twitter4j.Version -> ms:
+    java.lang.String getVersion() -> a
+twitter4j.api.StatusMethods -> mt:
+    twitter4j.Status updateStatus(java.lang.String) -> b
+twitter4j.auth.AccessToken -> mu:
+    java.lang.String screenName -> b
+    long userId -> c
+    java.lang.String getScreenName() -> a
+    long getUserId() -> b
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    java.lang.String getParameter(java.lang.String) -> a
+    java.lang.String getTokenSecret() -> c
+    java.lang.String getToken() -> d
+twitter4j.auth.Authorization -> mv:
+    java.lang.String getAuthorizationHeader(twitter4j.internal.http.HttpRequest) -> a
+    boolean isEnabled() -> a
+twitter4j.auth.AuthorizationFactory -> mw:
+    twitter4j.auth.Authorization getInstance(twitter4j.conf.Configuration) -> a
+twitter4j.auth.BasicAuthorization -> mx:
+    java.lang.String userId -> a
+    java.lang.String password -> b
+    java.lang.String basic -> c
+    java.lang.String getUserId() -> b
+    java.lang.String getPassword() -> c
+    java.lang.String encodeBasicAuthenticationString() -> d
+    java.lang.String getAuthorizationHeader(twitter4j.internal.http.HttpRequest) -> a
+    boolean isEnabled() -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+twitter4j.auth.NullAuthorization -> my:
+    twitter4j.auth.NullAuthorization SINGLETON -> a
+    twitter4j.auth.NullAuthorization getInstance() -> b
+    java.lang.String getAuthorizationHeader(twitter4j.internal.http.HttpRequest) -> a
+    boolean isEnabled() -> a
+    boolean equals(java.lang.Object) -> equals
+    java.lang.String toString() -> toString
+twitter4j.auth.OAuthAuthorization -> mz:
+    twitter4j.conf.Configuration conf -> b
+    twitter4j.internal.http.HttpClientWrapper http -> c
+    twitter4j.internal.http.HttpParameter OAUTH_SIGNATURE_METHOD -> d
+    twitter4j.internal.logging.Logger logger -> e
+    java.lang.String consumerKey -> f
+    java.lang.String consumerSecret -> g
+    java.lang.String realm -> h
+    twitter4j.auth.OAuthToken oauthToken -> i
+    java.util.Random RAND -> j
+    java.lang.Class class$twitter4j$auth$OAuthAuthorization -> a
+    java.lang.String getAuthorizationHeader(twitter4j.internal.http.HttpRequest) -> a
+    void ensureTokenIsAvailable() -> b
+    boolean isEnabled() -> a
+    twitter4j.auth.RequestToken getOAuthRequestToken(java.lang.String) -> a
+    twitter4j.auth.RequestToken getOAuthRequestToken(java.lang.String,java.lang.String) -> b
+    twitter4j.auth.AccessToken getOAuthAccessToken() -> d
+    twitter4j.auth.AccessToken getOAuthAccessToken(java.lang.String) -> b
+    twitter4j.auth.AccessToken getOAuthAccessToken(twitter4j.auth.RequestToken,java.lang.String) -> a
+    twitter4j.auth.AccessToken getOAuthAccessToken(java.lang.String,java.lang.String) -> c
+    void setOAuthAccessToken(twitter4j.auth.AccessToken) -> a
+    java.lang.String generateAuthorizationHeader(java.lang.String,java.lang.String,twitter4j.internal.http.HttpParameter[],java.lang.String,java.lang.String,twitter4j.auth.OAuthToken) -> a
+    void parseGetParameters(java.lang.String,java.util.List) -> a
+    java.lang.String generateAuthorizationHeader(java.lang.String,java.lang.String,twitter4j.internal.http.HttpParameter[],twitter4j.auth.OAuthToken) -> a
+    java.lang.String generateSignature(java.lang.String,twitter4j.auth.OAuthToken) -> a
+    java.lang.String normalizeRequestParameters(java.util.List) -> a
+    java.util.List toParamList(twitter4j.internal.http.HttpParameter[]) -> a
+    java.lang.String encodeParameters(java.util.List) -> b
+    java.lang.String encodeParameters(java.util.List,java.lang.String,boolean) -> a
+    java.lang.String constructRequestURL(java.lang.String) -> c
+    void setOAuthConsumer(java.lang.String,java.lang.String) -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    java.lang.Class class$(java.lang.String) -> d
+twitter4j.auth.OAuthSupport -> na:
+    void setOAuthConsumer(java.lang.String,java.lang.String) -> a
+    twitter4j.auth.RequestToken getOAuthRequestToken(java.lang.String) -> a
+    twitter4j.auth.AccessToken getOAuthAccessToken() -> d
+    twitter4j.auth.AccessToken getOAuthAccessToken(twitter4j.auth.RequestToken,java.lang.String) -> a
+    void setOAuthAccessToken(twitter4j.auth.AccessToken) -> a
+twitter4j.auth.OAuthToken -> nb:
+    java.lang.String token -> b
+    java.lang.String tokenSecret -> c
+    javax.crypto.spec.SecretKeySpec secretKeySpec -> d
+    java.lang.String[] responseStr -> a
+    java.lang.String getToken() -> d
+    java.lang.String getTokenSecret() -> c
+    void setSecretKeySpec(javax.crypto.spec.SecretKeySpec) -> a
+    javax.crypto.spec.SecretKeySpec getSecretKeySpec() -> e
+    java.lang.String getParameter(java.lang.String) -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+twitter4j.auth.RequestToken -> nc:
+    twitter4j.conf.Configuration conf -> b
+    twitter4j.auth.OAuthSupport oauth -> c
+    java.lang.String getAuthenticationURL() -> a
+    java.lang.String toString() -> toString
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+    java.lang.String getParameter(java.lang.String) -> a
+    java.lang.String getTokenSecret() -> c
+    java.lang.String getToken() -> d
+twitter4j.conf.Configuration -> nd:
+    boolean isDalvik() -> a
+    boolean isDebugEnabled() -> b
+    java.lang.String getUser() -> c
+    java.lang.String getPassword() -> d
+    java.lang.String getOAuthConsumerKey() -> e
+    java.lang.String getOAuthConsumerSecret() -> f
+    java.lang.String getOAuthAccessToken() -> g
+    java.lang.String getOAuthAccessTokenSecret() -> h
+    java.lang.String getRestBaseURL() -> i
+    java.lang.String getOAuthRequestTokenURL() -> j
+    java.lang.String getOAuthAccessTokenURL() -> k
+    java.lang.String getOAuthAuthenticationURL() -> l
+    boolean isIncludeRTsEnabled() -> m
+    boolean isIncludeEntitiesEnabled() -> n
+    boolean isJSONStoreEnabled() -> o
+    boolean isMBeanEnabled() -> p
+twitter4j.conf.ConfigurationContext -> ne:
+    twitter4j.conf.ConfigurationFactory factory -> a
+    twitter4j.conf.Configuration getInstance() -> a
+twitter4j.conf.ConfigurationFactory -> nf:
+    twitter4j.conf.Configuration getInstance() -> a
+twitter4j.internal.http.BASE64Encoder -> ng:
+    char last2byte -> a
+    char last4byte -> b
+    char last6byte -> c
+    char lead6byte -> d
+    char lead4byte -> e
+    char lead2byte -> f
+    char[] encodeTable -> g
+    java.lang.String encode(byte[]) -> a
+twitter4j.internal.http.HTMLEntity -> nh:
+    java.util.Map entityEscapeMap -> a
+    java.util.Map escapeEntityMap -> b
+    java.lang.String unescape(java.lang.String) -> a
+    void unescape(java.lang.StringBuffer) -> a
+twitter4j.internal.http.HttpClient -> ni:
+    twitter4j.internal.http.HttpResponse request(twitter4j.internal.http.HttpRequest) -> a
+    void shutdown() -> a
+twitter4j.internal.http.HttpClientConfiguration -> nj:
+    java.lang.String getHttpProxyHost() -> q
+    int getHttpProxyPort() -> r
+    java.lang.String getHttpProxyUser() -> s
+    java.lang.String getHttpProxyPassword() -> t
+    int getHttpConnectionTimeout() -> u
+    int getHttpReadTimeout() -> v
+    int getHttpRetryCount() -> w
+    int getHttpRetryIntervalSeconds() -> x
+    boolean isPrettyDebugEnabled() -> y
+twitter4j.internal.http.HttpClientFactory -> nk:
+    java.lang.reflect.Constructor HTTP_CLIENT_CONSTRUCTOR -> c
+    twitter4j.internal.logging.Logger logger -> d
+    java.lang.Class class$twitter4j$internal$http$HttpClientFactory -> a
+    java.lang.Class class$twitter4j$internal$http$HttpClientConfiguration -> b
+    twitter4j.internal.http.HttpClient getInstance(twitter4j.internal.http.HttpClientConfiguration) -> a
+    java.lang.Class class$(java.lang.String) -> a
+twitter4j.internal.http.HttpClientImpl -> nl:
+    twitter4j.internal.logging.Logger logger -> b
+    boolean isJDK14orEarlier -> c
+    twitter4j.internal.http.HttpClientConfiguration CONF -> d
+    java.util.Map instanceMap -> e
+    java.lang.Class class$twitter4j$internal$http$HttpClientImpl -> a
+    void shutdown() -> a
+    twitter4j.internal.http.HttpResponse request(twitter4j.internal.http.HttpRequest) -> a
+    void write(java.io.DataOutputStream,java.lang.String) -> a
+    void setHeaders(twitter4j.internal.http.HttpRequest,java.net.HttpURLConnection) -> a
+    java.net.HttpURLConnection getConnection(java.lang.String) -> b
+    boolean isProxyConfigured() -> b
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    java.lang.Class class$(java.lang.String) -> a
+    twitter4j.internal.http.HttpClientConfiguration access$000(twitter4j.internal.http.HttpClientImpl) -> a
+twitter4j.internal.http.HttpClientImpl$1 -> nm:
+    twitter4j.internal.http.HttpClientImpl this$0 -> a
+    java.net.PasswordAuthentication getPasswordAuthentication() -> getPasswordAuthentication
+twitter4j.internal.http.HttpClientWrapper -> nn:
+    twitter4j.internal.http.HttpClientWrapperConfiguration wrapperConf -> a
+    twitter4j.internal.http.HttpClient http -> b
+    java.util.Map requestHeaders -> c
+    twitter4j.internal.http.HttpResponseListener httpResponseListener -> d
+    void shutdown() -> a
+    twitter4j.internal.http.HttpResponse request(twitter4j.internal.http.HttpRequest) -> a
+    void setHttpResponseListener(twitter4j.internal.http.HttpResponseListener) -> a
+    twitter4j.internal.http.HttpResponse post(java.lang.String,twitter4j.internal.http.HttpParameter[],twitter4j.auth.Authorization) -> a
+    twitter4j.internal.http.HttpResponse post(java.lang.String,twitter4j.auth.Authorization) -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+twitter4j.internal.http.HttpClientWrapperConfiguration -> no:
+    java.util.Map getRequestHeaders() -> z
+twitter4j.internal.http.HttpParameter -> np:
+    java.lang.String name -> a
+    java.lang.String value -> b
+    java.io.File file -> c
+    java.io.InputStream fileBody -> d
+    java.lang.String getName() -> a
+    java.lang.String getValue() -> b
+    java.io.File getFile() -> c
+    java.io.InputStream getFileBody() -> d
+    boolean isFile() -> e
+    boolean hasFileBody() -> f
+    java.lang.String getContentType() -> g
+    boolean equals(java.lang.Object) -> equals
+    boolean containsFile(twitter4j.internal.http.HttpParameter[]) -> a
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    int compareTo(java.lang.Object) -> compareTo
+    java.lang.String encodeParameters(twitter4j.internal.http.HttpParameter[]) -> b
+    java.lang.String encode(java.lang.String) -> a
+twitter4j.internal.http.HttpRequest -> nq:
+    twitter4j.internal.http.RequestMethod method -> a
+    java.lang.String url -> b
+    twitter4j.internal.http.HttpParameter[] parameters -> c
+    twitter4j.auth.Authorization authorization -> d
+    java.util.Map requestHeaders -> e
+    twitter4j.internal.http.HttpParameter[] NULL_PARAMETERS -> f
+    twitter4j.internal.http.RequestMethod getMethod() -> a
+    twitter4j.internal.http.HttpParameter[] getParameters() -> b
+    java.lang.String getURL() -> c
+    twitter4j.auth.Authorization getAuthorization() -> d
+    java.util.Map getRequestHeaders() -> e
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+twitter4j.internal.http.HttpResponse -> nr:
+    twitter4j.internal.logging.Logger logger -> f
+    twitter4j.internal.http.HttpClientConfiguration CONF -> a
+    int statusCode -> b
+    java.lang.String responseAsString -> c
+    java.io.InputStream is -> d
+    boolean streamConsumed -> g
+    org.json.JSONObject json -> h
+    java.lang.Class class$twitter4j$internal$http$HttpResponseImpl -> e
+    int getStatusCode() -> a
+    java.lang.String getResponseHeader(java.lang.String) -> a
+    java.io.InputStream asStream() -> b
+    java.lang.String asString() -> c
+    org.json.JSONObject asJSONObject() -> d
+    void disconnectForcibly() -> f
+    void disconnect() -> e
+    java.lang.String toString() -> toString
+    java.lang.Class class$(java.lang.String) -> b
+twitter4j.internal.http.HttpResponseEvent -> ns:
+    twitter4j.internal.http.HttpRequest request -> a
+    twitter4j.internal.http.HttpResponse response -> b
+    twitter4j.TwitterException twitterException -> c
+    twitter4j.internal.http.HttpResponse getResponse() -> a
+    twitter4j.TwitterException getTwitterException() -> b
+    boolean isAuthenticated() -> c
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+twitter4j.internal.http.HttpResponseImpl -> nt:
+    java.net.HttpURLConnection con -> f
+    java.lang.String getResponseHeader(java.lang.String) -> a
+    void disconnect() -> e
+twitter4j.internal.http.HttpResponseListener -> nu:
+    void httpResponseReceived(twitter4j.internal.http.HttpResponseEvent) -> a
+twitter4j.internal.http.RequestMethod -> nv:
+    java.lang.String name -> f
+    java.util.Map instances -> g
+    twitter4j.internal.http.RequestMethod GET -> a
+    twitter4j.internal.http.RequestMethod POST -> b
+    twitter4j.internal.http.RequestMethod DELETE -> c
+    twitter4j.internal.http.RequestMethod HEAD -> d
+    twitter4j.internal.http.RequestMethod PUT -> e
+    java.lang.String name() -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+twitter4j.internal.http.XAuthAuthorization -> nw:
+    twitter4j.auth.BasicAuthorization basic -> a
+    java.lang.String consumerKey -> b
+    java.lang.String consumerSecret -> c
+    java.lang.String getAuthorizationHeader(twitter4j.internal.http.HttpRequest) -> a
+    java.lang.String getUserId() -> b
+    java.lang.String getPassword() -> c
+    java.lang.String getConsumerKey() -> d
+    java.lang.String getConsumerSecret() -> e
+    void setOAuthConsumer(java.lang.String,java.lang.String) -> a
+    boolean isEnabled() -> a
+twitter4j.internal.json.DataObjectFactoryUtil -> nx:
+    java.lang.reflect.Method CLEAR_THREAD_LOCAL_MAP -> b
+    java.lang.reflect.Method REGISTER_JSON_OBJECT -> c
+    java.lang.Class class$twitter4j$json$DataObjectFactory -> a
+    void clearThreadLocalMap() -> a
+    java.lang.Object registerJSONObject(java.lang.Object,java.lang.Object) -> a
+    java.lang.Class class$(java.lang.String) -> a
+twitter4j.internal.logging.Logger -> ny:
+    twitter4j.internal.logging.LoggerFactory LOGGER_FACTORY -> b
+    java.lang.Class class$twitter4j$internal$logging$Logger -> a
+    twitter4j.internal.logging.LoggerFactory getLoggerFactory(java.lang.String,java.lang.String) -> b
+    twitter4j.internal.logging.Logger getLogger(java.lang.Class) -> a
+    boolean isDebugEnabled() -> a
+    void debug(java.lang.String) -> a
+    void debug(java.lang.String,java.lang.String) -> a
+    void warn(java.lang.String) -> b
+    void error(java.lang.String) -> c
+    void error(java.lang.String,java.lang.Throwable) -> a
+    java.lang.Class class$(java.lang.String) -> d
+twitter4j.internal.logging.LoggerFactory -> nz:
+    twitter4j.internal.logging.Logger getLogger(java.lang.Class) -> a
+twitter4j.internal.logging.StdOutLogger -> oa:
+    boolean DEBUG -> b
+    boolean isDebugEnabled() -> a
+    void debug(java.lang.String) -> a
+    void debug(java.lang.String,java.lang.String) -> a
+    void warn(java.lang.String) -> b
+    void error(java.lang.String) -> c
+    void error(java.lang.String,java.lang.Throwable) -> a
+twitter4j.internal.logging.StdOutLoggerFactory -> ob:
+    twitter4j.internal.logging.Logger SINGLETON -> a
+    twitter4j.internal.logging.Logger getLogger(java.lang.Class) -> a
+twitter4j.internal.util.ParseUtil -> oc:
+    java.lang.ThreadLocal formatMap -> a
+    java.lang.String getUnescapedString(java.lang.String,org.json.JSONObject) -> a
+    java.lang.String getRawString(java.lang.String,org.json.JSONObject) -> b
+    java.util.Date getDate(java.lang.String,org.json.JSONObject) -> c
+    java.util.Date getDate(java.lang.String,org.json.JSONObject,java.lang.String) -> a
+    java.util.Date getDate(java.lang.String,java.lang.String) -> a
+    int getInt(java.lang.String,org.json.JSONObject) -> d
+    int getInt(java.lang.String) -> a
+    long getLong(java.lang.String,org.json.JSONObject) -> e
+    long getLong(java.lang.String) -> b
+    boolean getBoolean(java.lang.String,org.json.JSONObject) -> f
+twitter4j.internal.util.ParseUtil$1 -> od:
+    java.util.Map initialValue() -> a
+    java.lang.Object initialValue() -> initialValue
+twitter4j.internal.util.T4JInternalStringUtil -> oe:
+    java.lang.String maskString(java.lang.String) -> a
+    java.lang.String[] split(java.lang.String,java.lang.String) -> a
+twitter4j.json.DataObjectFactory -> of:
+    java.lang.reflect.Constructor statusConstructor -> d
+    java.lang.reflect.Constructor userConstructor -> e
+    java.lang.reflect.Constructor tweetConstructor -> f
+    java.lang.reflect.Constructor relationshipConstructor -> g
+    java.lang.reflect.Constructor placeConstructor -> h
+    java.lang.reflect.Constructor savedSearchConstructor -> i
+    java.lang.reflect.Constructor trendConstructor -> j
+    java.lang.reflect.Constructor trendsConstructor -> k
+    java.lang.reflect.Constructor IDsConstructor -> l
+    java.lang.reflect.Constructor rateLimitStatusConstructor -> m
+    java.lang.reflect.Constructor categoryConstructor -> n
+    java.lang.reflect.Constructor directMessageConstructor -> o
+    java.lang.reflect.Constructor locationConstructor -> p
+    java.lang.reflect.Constructor userListConstructor -> q
+    java.lang.reflect.Constructor relatedResultsConstructor -> r
+    java.lang.reflect.Constructor statusDeletionNoticeConstructor -> s
+    java.lang.reflect.Constructor accountTotalsConstructor -> t
+    java.lang.ThreadLocal rawJsonMap -> u
+    java.lang.Class class$org$json$JSONObject -> a
+    java.lang.Class class$java$lang$String -> b
+    java.lang.Class class$org$json$JSONArray -> c
+    java.lang.Class class$(java.lang.String) -> a
+twitter4j.json.DataObjectFactory$1 -> og:
+    java.util.Map initialValue() -> a
+    java.lang.Object initialValue() -> initialValue
+twitter4j.management.APIStatistics -> oh:
+    twitter4j.management.InvocationStatisticsCalculator API_STATS_CALCULATOR -> a
+    java.util.Map METHOD_STATS_MAP -> b
+    int HISTORY_SIZE -> c
+    void methodCalled(java.lang.String,long,boolean) -> a
+    twitter4j.management.InvocationStatisticsCalculator getMethodStatistics(java.lang.String) -> a
+twitter4j.management.APIStatisticsMBean -> oi:
+twitter4j.management.APIStatisticsOpenMBean -> oj:
+    java.lang.String[] ITEM_NAMES -> a
+    javax.management.openmbean.OpenType[] ITEM_TYPES -> b
+    java.lang.String[] ITEM_DESCRIPTIONS -> c
+    javax.management.openmbean.CompositeType METHOD_STATS_TYPE -> d
+    twitter4j.management.APIStatisticsMBean API_STATISTICS -> e
+    javax.management.openmbean.TabularType API_STATISTICS_TYPE -> f
+twitter4j.management.InvocationStatisticsCalculator -> ok:
+    java.lang.String name -> a
+    long[] times -> b
+    int index -> c
+    long callCount -> d
+    long errorCount -> e
+    long totalTime -> f
+    void increment(long,boolean) -> a
+    long getCallCount() -> a
+    long getErrorCount() -> b
+    long getTotalTime() -> c
+    long getAverageTime() -> d
+    java.lang.String toString() -> toString

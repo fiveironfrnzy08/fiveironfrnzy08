@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+<!--	Used for the SharedPreferences key - Keep to one word or seperated by _	-->
+
+	<string name="ap_name">AP</string>
+    <string name="abc_name">ABC</string>
+    <string name="bbc_name">BBC</string>
+    <string name="cbc_name">CBC</string>
+    <string name="cbs_name">CBS</string>
+    <string name="cnn_name">CNN</string>
+    <string name="fox_name">Fox</string>
+    <string name="google_name">Google</string>
+    <string name="nbc_name">NBC</string>
+    <string name="reuters_name">Reuters</string>
+    <string name="time_name">Time</string>
+    <string name="usatoday_name">USAToday</string>
+    <string name="wn_name">WN</string>
+    <string name="yahoo_name">Yahoo</string>
+</resources>

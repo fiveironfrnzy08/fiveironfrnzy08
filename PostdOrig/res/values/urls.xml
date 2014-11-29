@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<item type="string" name="url_ap">http://hosted.ap.org/lineups/TOPHEADS-rss_2.0.xml?SITE=RANDOM&amp;SECTION=HOME</item>
+	<item type="string" name="url_abc">http://feeds.abcnews.com/abcnews/topstories</item>
+    <item type="string" name="url_bbc">http://feeds.bbci.co.uk/news/rss.xml?edition=us</item>
+	<item type="string" name="url_cbc">http://rss.cbc.ca/lineup/topstories.xml</item>
+	<item type="string" name="url_cbs">http://feeds.cbsnews.com/CBSNewsMain</item>
+	<item type="string" name="url_cnn">http://rss.cnn.com/rss/cnn_topstories.rss</item>
+	<item type="string" name="url_fox">http://feeds.foxnews.com/foxnews/most-popular</item>
+	<item type="string" name="url_google">http://news.google.com/news?pz=1&amp;cf=all&amp;ned=us&amp;hl=en&amp;output=rss</item>
+	<item type="string" name="url_nbc">http://rss.msnbc.msn.com/id/3032091/device/rss/rss.xml</item>
+	<item type="string" name="url_reuters">http://feeds.reuters.com/reuters/topNews</item>
+	<item type="string" name="url_time">http://feeds2.feedburner.com/time/topstories</item>
+	<item type="string" name="url_usatoday">http://rssfeeds.usatoday.com/usatoday-NewsTopStories</item>
+	<item type="string" name="url_wn">http://rss.wn.com/English/top-stories</item>
+	<item type="string" name="url_yahoo">http://news.yahoo.com/rss/</item>
+</resources>

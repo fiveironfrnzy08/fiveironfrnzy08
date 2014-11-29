@@ -1,0 +1,2 @@
+serviceClass: org.ryangray.onkyo.client.GreetingService
+path: 9C5DF5759B5CD6049EBDA94C902A79A6.gwt.rpc
