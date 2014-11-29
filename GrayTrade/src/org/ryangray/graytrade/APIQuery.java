@@ -68,27 +68,25 @@ public class APIQuery {
 		tradeArgs.put( "type", "limit" );
 		tradeArgs.put( "timeInForce", "GTC" );
 		JSONObject responseGetInfo = APIQuery.doRequest( "hitbtc", "post", "http://demo-api.hitbtc.com", "/api/1/trading/new_order", tradeArgs );
-
-//		 APIQuery request = null;
-//		/*
-//		 * Example 1 -- GET method, no arguments
-//		 */
-//		 JSONObject response1 = request.doRequest( "bter", "get", "http://data.bter.com", "/api/1/ticker/doge_btc" );
-//		 System.out.println( response1 );
-//		
-//		 /*
-//		 * Example 2 -- POST method, no arguments
-//		 */
-//		 JSONObject response2 = request.doRequest( "bter", "post", "https://bter.com", "/api/1/private/getfunds" );
-//		 System.out.println( response2 );
-//		
-//		 /*
-//		 * Example 2 -- POST method, no arguments
-//		 */
-//		 Map< String, String > arguments = new HashMap<>( );
-//		 arguments.put( "order_id", "123456" );
-//		 JSONObject response3 = request.doRequest( "bter", "post", "https://bter.com", "/api/1/private/getorder", arguments );
-//		 System.out.println( response3 );
+		/*
+		 * Example 1 -- GET method, no arguments
+		 */
+		 JSONObject response1 = APIQuery.doRequest( "bter", "get", "http://data.bter.com", "/api/1/ticker/doge_btc" );
+		 System.out.println( response1 );
+		
+		 /*
+		 * Example 2 -- POST method, no arguments
+		 */
+		 JSONObject response2 = APIQuery.doRequest( "bter", "post", "https://bter.com", "/api/1/private/getfunds" );
+		 System.out.println( response2 );
+		
+		 /*
+		 * Example 2 -- POST method, no arguments
+		 */
+		 Map< String, String > arguments = new HashMap<>( );
+		 arguments.put( "order_id", "123456" );
+		 JSONObject response3 = APIQuery.doRequest( "bter", "post", "https://bter.com", "/api/1/private/getorder", arguments );
+		 System.out.println( response3 );
 
 	}
 
