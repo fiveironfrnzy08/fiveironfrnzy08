@@ -30,9 +30,10 @@ public class TakeOffMain {
 		System.out.println( new Date( ) );
 
 		/**
-		 * Top 52 US Airpots according to http://www.nationsonline.org/oneworld/major_US_airports.htm
+		 * Top 52 US Airports according to http://www.nationsonline.org/oneworld/major_US_airports.htm
 		 */
-		List< String > airports = new LinkedList<>( Arrays.asList( new String[] { "ATL", "ANC", "AUS", "BWI", "BOS", "CLT", "MDW", "ORD", "CVG", "CLE", "CMH", "DFW", "DEN", "DTW", "FLL", "RSW", "BDL", "HNL", "IAH", "HOU", "IND", "MCI", "LAS", "LAX", "MEM", "MIA", "MSP", "BNA", "MSY", "JFK", "LGA", "EWR", "OAK", "ONT", "MCO", "PHL", "PHX", "PIT", "PDX", "RDU", "SMF", "SLC", "SAT", "SAN", "SFO", "SJC", "SNA", "SEA", "STL", "TPA", "IAD", "DCA" } ) );
+//		List< String > airports = new LinkedList<>( Arrays.asList( new String[] { "ATL", "ANC", "AUS", "BWI", "BOS", "CLT", "MDW", "ORD", "CVG", "CLE", "CMH", "DFW", "DEN", "DTW", "FLL", "RSW", "BDL", "HNL", "IAH", "HOU", "IND", "MCI", "LAS", "LAX", "MEM", "MIA", "MSP", "BNA", "MSY", "JFK", "LGA", "EWR", "OAK", "ONT", "MCO", "PHL", "PHX", "PIT", "PDX", "RDU", "SMF", "SLC", "SAT", "SAN", "SFO", "SJC", "SNA", "SEA", "STL", "TPA", "IAD", "DCA" } ) );
+		List< String > airports = new LinkedList<>( Arrays.asList( new String[] { "ATL" } ) );
 		if ( threadsToRun == null ) {
 			threadsToRun = airports.size( );
 		}

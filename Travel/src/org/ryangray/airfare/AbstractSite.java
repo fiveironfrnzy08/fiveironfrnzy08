@@ -31,7 +31,7 @@ public abstract class AbstractSite {
 
 	public static boolean	debugURL		= false;
 	public static boolean	useDebugJSON	= false;
-	public static boolean	setUpDebugJSON	= true;
+	public static boolean	setUpDebugJSON	= false;
 	public static int		groupID;
 	public static Timestamp	groupDate;
 
@@ -67,7 +67,8 @@ public abstract class AbstractSite {
 				Utilities.outputToFile( page.asXml( ), "C://users//rgray//Desktop//" + this.getClass( ).getSimpleName( ) + " - page.asText().txt" );
 			}
 			
-			jsondata = page.getElementById( "jsonData" ).getFirstChild( ).getNodeValue( ).trim( );
+			System.out.println( page.getElementById( "flightModule0" ) );
+			jsondata = page.getElementById( "bCol" ).asXml( );
 
 			if ( setUpDebugJSON ) {
 				Utilities.outputToFile( jsondata, "C://users//rgray//Desktop//" + this.getClass( ).getSimpleName( ) + " - jsondata.txt" );
