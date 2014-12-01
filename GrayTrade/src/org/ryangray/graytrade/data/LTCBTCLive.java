@@ -14,6 +14,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.ryangray.graytrade.APIQuery;
 import org.ryangray.graytrade.Constants;
+import org.ryangray.graytrade.LTCBTCInfo;
 import org.ryangray.graytrade.Utilities;
 
 public class LTCBTCLive {

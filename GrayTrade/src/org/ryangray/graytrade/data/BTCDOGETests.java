@@ -10,6 +10,7 @@ import java.text.DecimalFormat;
 import java.util.LinkedHashMap;
 import java.util.Map.Entry;
 
+import org.ryangray.graytrade.BTCDOGEInfo;
 import org.ryangray.graytrade.Constants;
 import org.ryangray.graytrade.Utilities;
 
@@ -17,7 +18,7 @@ public class BTCDOGETests {
 
 	static LinkedHashMap< Integer, String[] >	tradeIDs;
 	static BTCDOGEInfo							info;
-	static String								baseQuery		= "SELECT id, datetime, doge_btc_sell, doge_btc_buy, doge_btc_average FROM " + Constants.DATABASE + "." + Constants.DOGE_BTC_DATA_TABLE;
+	static String								baseQuery		= "SELECT id, datetime, doge_btc_sell, doge_btc_buy, doge_btc_average FROM " + Constants.DATABASE + "." + Constants.DOGE_BTC_PING;
 	static Connection							con				= null;
 	static double								startingAssets	= 2;
 
@@ -29,15 +30,14 @@ public class BTCDOGETests {
 			for ( int i = 0; i < 1; i++ ) {
 
 				info = new BTCDOGEInfo( );
-				info.setThreshold( .00000000524 );
-//				 info.setThreshold( .000000001 * ( i + 1 ) );
+				info.setThreshold( 0.0 );
+				// info.setThreshold( .000000001 * ( i + 1 ) );
 				// info.setThreshold( info.getThreshold( ) );
 				System.out.println( "Using threshold " + info.getThreshold( ) );
 				System.out.println( "Using noTradeThreshold " + info.getNoTradeReset( ) );
 				boolean sellDOGE = true;
-				boolean resetAverage = false;
+				boolean resetAverage = true;
 				int noTradeCount = 0;
-				int noTradeResetCount = 0;
 				tradeIDs = new LinkedHashMap<>( );
 
 				if ( !shouldRun( ) ) {
@@ -51,17 +51,22 @@ public class BTCDOGETests {
 
 				while ( records.next( ) != false ) {
 
-//					System.out.println( records.getInt( "id" ) + " " + info.getAverage( ) + " " + records.getDouble( "doge_btc_sell" ) + " " + records.getDouble( "doge_btc_buy" ) );
+					System.out.println( "id: " + records.getInt( "id" ) + "; sellDoge: " + sellDOGE + "; noTradeCount: " + noTradeCount + "; threshold: " + info.getThreshold( ) + "; average: " + info.getAverage( ) + "; doge_btc_sell: " + records.getDouble( "doge_btc_sell" ) + "; doge_btc_buy:" + records.getDouble( "doge_btc_buy" ) );
 
 					if ( ( resetAverage && sellDOGE ) || ( noTradeCount > info.getNoTradeReset( ) && sellDOGE ) ) {
 
-						if ( !resetAverage && ( noTradeCount > info.getNoTradeReset( ) ) ) {
-							noTradeResetCount++;
-						}
 						info.setAverage( resetAverage( records.getInt( "id" ), sellDOGE ) );
 						resetAverage = false;
 						noTradeCount = 0;
 
+					}
+
+					/**
+					 * If this is the first time through, set the initial sell rate * .005 as a starting threshold
+					 */
+					if ( info.getThreshold( ) == 0.0 ) {
+						info.setThreshold( records.getDouble( "doge_btc_sell" ) * .005 );
+						System.out.println( "Using threshold " + info.getThreshold( ) );
 					}
 
 					if ( sellDOGE && records.getDouble( "doge_btc_sell" ) - info.getAverage( ) > info.getThreshold( ) ) {
@@ -117,7 +122,6 @@ public class BTCDOGETests {
 				String tradeDirection = value[ 6 ];
 
 				System.out.println( "TradeIDs Size: " + tradeIDs.size( ) );
-				System.out.println( "No Trade Reset Count: " + noTradeResetCount );
 				System.out.println( "ID = " + last.getKey( ) + ", average = " + ave + ", dogeBTC = " + dogeBTC + ", doge = " + doge + ", btc = " + btc + ", dogeVal = " + dogeVal + ", btcVal=" + btcVal + ", tradeDirection = " + tradeDirection );
 				System.out.println( "" );
 
@@ -181,7 +185,8 @@ public class BTCDOGETests {
 		}
 
 		tradeIDs.put( records.getInt( "id" ), new String[] { String.valueOf( info.getAverage( ) ), String.valueOf( ratio ), sell, buy, String.valueOf( info.getDogeAsset( ) ), String.valueOf( info.getBtcAsset( ) ), tradeDirection } );
-//		System.out.println( records.getInt( "id" ) + ", " + String.valueOf( info.getAverage( ) ) + ", " + String.valueOf( ratio ) + ", " + sell + ", " + buy + ", " + String.valueOf( info.getDogeAsset( ) ) + ", " + String.valueOf( info.getBtcAsset( ) ) + ", " + tradeDirection );
+		// System.out.println( records.getInt( "id" ) + ", " + String.valueOf( info.getAverage( ) ) + ", " + String.valueOf( ratio ) + ", " + sell + ", " + buy
+		// + ", " + String.valueOf( info.getDogeAsset( ) ) + ", " + String.valueOf( info.getBtcAsset( ) ) + ", " + tradeDirection );
 
 		if ( info.isLive( ) ) {
 
@@ -195,9 +200,9 @@ public class BTCDOGETests {
 	private static double resetAverage( int id, boolean sellDOGE ) throws SQLException {
 
 		StringBuffer preparedStatement = new StringBuffer( );
-		preparedStatement.append( "SELECT AVG(doge_btc_sell) as doge_btc_sell, AVG(doge_btc_buy) as doge_btc_buy FROM " + Constants.DATABASE + "." + Constants.DOGE_BTC_DATA_TABLE + " where datetime > date_sub(now(), interval 1 day);" );
+		preparedStatement.append( "SELECT AVG(doge_btc_sell) as doge_btc_sell, AVG(doge_btc_buy) as doge_btc_buy FROM " + Constants.DATABASE + "." + Constants.DOGE_BTC_PING + " where datetime > date_sub(now(), interval 1 day);" );
 		// preparedStatement.append( "SELECT AVG(doge_btc_sell) as doge_btc_sell, AVG(doge_btc_buy) as doge_btc_buy FROM " + Constants.DATABASE + "." +
-		// Constants.DATA_BTC_DOGE_TABLE + " where id < " + id + " order by id desc limit 25;" );
+		// Constants.DOGE_BTC_PING + " where id < " + id + " order by id desc limit 25;" );
 		PreparedStatement statement = con.prepareStatement( preparedStatement.toString( ) );
 		ResultSet records = statement.executeQuery( );
 

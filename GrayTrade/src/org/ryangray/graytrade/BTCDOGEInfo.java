@@ -1,4 +1,4 @@
-package org.ryangray.graytrade.data;
+package org.ryangray.graytrade;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,9 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.Date;
-
-import org.ryangray.graytrade.Constants;
-import org.ryangray.graytrade.Utilities;
 
 public class BTCDOGEInfo {
 
@@ -90,7 +87,7 @@ public class BTCDOGEInfo {
 		Connection con = Utilities.getDefaultCon( );
 		StringBuffer preparedStatement = new StringBuffer( );
 
-		preparedStatement.append( "SELECT * FROM " + Constants.DATABASE + "." + Constants.DOGE_BTC_INFO_TABLE + " order by id desc limit 1;" );
+		preparedStatement.append( "SELECT * FROM " + Constants.DATABASE + "." + Constants.DOGE_BTC_INFO + " order by id desc limit 1;" );
 		PreparedStatement statement = con.prepareStatement( preparedStatement.toString( ) );
 		ResultSet records = statement.executeQuery( );
 

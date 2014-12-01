@@ -13,9 +13,9 @@ public class Constants {
 	public static final String	LTC_BTC_INFO_TABLE		= "graytrade_info";
 	public static final String	LTC_BTC_TRADES_TABLE		= "graytrade_trades";
 	
-	public static final String	DOGE_BTC_DATA_TABLE		= "graytrade_btc_doge";
-	public static final String	DOGE_BTC_INFO_TABLE		= "graytrade_btc_doge_info";
-	public static final String	DOGE_BTC_ORDER_TABLE		= "graytrade_btc_doge_order";
+	public static final String	DOGE_BTC_PING		= "btc_doge_ping";
+	public static final String	DOGE_BTC_INFO		= "btc_doge_info";
+	public static final String	DOGE_BTC_ORDER		= "btc_doge_order";
 	
 
 }

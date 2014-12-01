@@ -97,13 +97,13 @@ public class BTCDOGELogger {
 
 		StringBuffer preparedStatement = new StringBuffer( );
 
-		preparedStatement.append( "SELECT id, datetime, AVG(doge_btc_sell) as doge_btc_sell, AVG(doge_btc_buy) as doge_btc_buy FROM " + Constants.DATABASE + "." + Constants.DOGE_BTC_DATA_TABLE + " where datetime > date_sub(now(), interval 1 day);" );
+		preparedStatement.append( "SELECT id, datetime, AVG(doge_btc_sell) as doge_btc_sell, AVG(doge_btc_buy) as doge_btc_buy FROM " + Constants.DATABASE + "." + Constants.DOGE_BTC_PING + " where datetime > date_sub(now(), interval 1 day);" );
 		PreparedStatement statement = con.prepareStatement( preparedStatement.toString( ) );
 		ResultSet records = statement.executeQuery( );
 		records.next( );
 
 		preparedStatement = new StringBuffer( );
-		preparedStatement.append( "UPDATE " + Constants.DATABASE + "." + Constants.DOGE_BTC_INFO_TABLE + " SET average = ?, threshold = ?, doge_asset = ?, btc_asset = ?, fee = ?, live = ?, no_trade_reset = ? WHERE id = 1;" );
+		preparedStatement.append( "UPDATE " + Constants.DATABASE + "." + Constants.DOGE_BTC_INFO + " SET average = ?, threshold = ?, doge_asset = ?, btc_asset = ?, fee = ?, live = ?, no_trade_reset = ? WHERE id = 1;" );
 		statement = con.prepareStatement( preparedStatement.toString( ) );
 		statement.setDouble( 1, records.getDouble( "doge_btc_sell" ) );
 		statement.setDouble( 2, .000000005 );
@@ -157,7 +157,7 @@ public class BTCDOGELogger {
 		System.out.println( "btcVolume: " + btcVolume );
 
 		StringBuffer preparedStatement = new StringBuffer( );
-		preparedStatement.append( "INSERT INTO " + Constants.DATABASE + "." + Constants.DOGE_BTC_DATA_TABLE + " ( datetime, doge_btc_buy, doge_btc_sell, doge_btc_average, doge_btc_vol, doge_buy, doge_sell, doge_average, doge_vol, btc_buy, btc_sell, btc_average, btc_vol) VALUES (?, ?,?,?,?, ?,?,?,?, ?,?,?,?);" );
+		preparedStatement.append( "INSERT INTO " + Constants.DATABASE + "." + Constants.DOGE_BTC_PING + " ( datetime, doge_btc_buy, doge_btc_sell, doge_btc_average, doge_btc_vol, doge_buy, doge_sell, doge_average, doge_vol, btc_buy, btc_sell, btc_average, btc_vol) VALUES (?, ?,?,?,?, ?,?,?,?, ?,?,?,?);" );
 		PreparedStatement statement = con.prepareStatement( preparedStatement.toString( ) );
 
 		statement = con.prepareStatement( preparedStatement.toString( ) );
@@ -197,7 +197,7 @@ public class BTCDOGELogger {
 		System.out.println( "dogeBTCVolume: " + dogeBTCVolume );
 
 		StringBuffer preparedStatement = new StringBuffer( );
-		preparedStatement.append( "INSERT INTO " + Constants.DATABASE + "." + Constants.DOGE_BTC_DATA_TABLE + " ( datetime, doge_btc_sell, doge_btc_buy, doge_btc_average, doge_btc_vol ) VALUES (?, ?,?,?,?);" );
+		preparedStatement.append( "INSERT INTO " + Constants.DATABASE + "." + Constants.DOGE_BTC_PING + " ( datetime, doge_btc_sell, doge_btc_buy, doge_btc_average, doge_btc_vol ) VALUES (?, ?,?,?,?);" );
 		PreparedStatement statement = con.prepareStatement( preparedStatement.toString( ) );
 
 		statement = con.prepareStatement( preparedStatement.toString( ) );
@@ -233,7 +233,7 @@ public class BTCDOGELogger {
 
 		preparedStatement = new StringBuffer( );
 
-		preparedStatement.append( "UPDATE " + Constants.DATABASE + "." + Constants.DOGE_BTC_INFO_TABLE + " SET average = ?, threshold = ?, doge_asset = ?, btc_asset = ?, fee = ?, live = ?, no_trade_reset = ? WHERE id = 1;" );
+		preparedStatement.append( "UPDATE " + Constants.DATABASE + "." + Constants.DOGE_BTC_INFO + " SET average = ?, threshold = ?, doge_asset = ?, btc_asset = ?, fee = ?, live = ?, no_trade_reset = ? WHERE id = 1;" );
 		statement = con.prepareStatement( preparedStatement.toString( ) );
 		statement.setDouble( 1, average );
 		statement.setDouble( 2, .0001 );

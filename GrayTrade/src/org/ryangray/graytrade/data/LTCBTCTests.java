@@ -10,6 +10,7 @@ import java.util.LinkedHashMap;
 import java.util.Map.Entry;
 
 import org.ryangray.graytrade.Constants;
+import org.ryangray.graytrade.LTCBTCInfo;
 import org.ryangray.graytrade.Utilities;
 
 public class LTCBTCTests {
@@ -21,10 +22,6 @@ public class LTCBTCTests {
 	static double startingAssets = 2;
 	
 	public static void main( String[] args ) throws Exception {
-//		Class.forName("com.mysql.jdbc.Driver");
-//		Connection con = DriverManager.getConnection("jdbc:mysql://ryangray.org:3306/news_db","root","ryan135244");
-//		PreparedStatement statement = con.prepareStatement("SELECT * FROM news_sources;");
-//		ResultSet result = statement.executeQuery("SELECT * FROM news_sources;");
 
 		con = Utilities.getDefaultCon( );
 		try {

@@ -1,4 +1,4 @@
-package org.ryangray.graytrade.data;
+package org.ryangray.graytrade;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -17,8 +17,6 @@ import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
 
 import org.apache.commons.lang3.text.WordUtils;
-import org.ryangray.graytrade.Constants;
-import org.ryangray.graytrade.Utilities;
 
 public class LTCBTCInfo {
 
